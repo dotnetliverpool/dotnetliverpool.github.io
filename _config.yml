@@ -24,17 +24,15 @@ post_limit: 5
 title : .NET Liverpool
 tagline: Liverpool's best community group for developers and tech enthusiasts 
 author : 
-  name : Antonio Trento
+  name : .NET Liverpool
   site: https://dev.dotnetliverpool.org.uk
-  description : I&#39;m a web master interested in communication applied to web marketing.
-  image : social-image.png
-  email : lantoniotrento@gmail.com
-  github : antoniotrento
-  twitter : lantoniotrento
-  facebook: lantoniotrento
-  linkedin: antoniotrento
-  instagram: lantoniotrento
-  pinterest: antoniotrento
+  description : Liverpool's best community group for developers and tech enthusiasts 
+  image : channels4_profile.jpg
+  email : contact@dotnetliverpool.org.uk
+  github : dotnetliverpool
+  twitter : dotnetliverpool
+  facebook: DotNetLiverpool
+  linkedin: dotnet-liverpool-meetup
   feedburner : 
 
 twitter_username: dotnetliverpool
