@@ -21,11 +21,11 @@ google_ad_client:
 post_limit: 5
 
 
-title : Helium Jekyll
-tagline: Bootstrap 4 UI kit for jekyll
+title : .NET Liverpool
+tagline: Liverpool's best community group for developers and tech enthusiasts 
 author : 
   name : Antonio Trento
-  site: https://lantoniotrento.github.io
+  site: https://dev.dotnetliverpool.org.uk
   description : I&#39;m a web master interested in communication applied to web marketing.
   image : social-image.png
   email : lantoniotrento@gmail.com
@@ -37,7 +37,7 @@ author :
   pinterest: antoniotrento
   feedburner : 
 
-twitter_username: lantoniotrento
+twitter_username: dotnetliverpool
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
 # Most places will/should use BASE_PATH to make the urls
