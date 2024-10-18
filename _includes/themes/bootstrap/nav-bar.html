@@ -14,14 +14,28 @@
             </div>
 
             <!-- navbar-default -->
-            <nav class="navbar navbar-toggleable-sm navbar-light bg-default">
+            <nav class="navbar navbar-toggleable-md navbar-light bg-default py-0">
               <div class="container">
-                <a class="navbar-brand" href="{{ BASE_PATH }}"><img id="dotnetlogo" src="{{ BASE_PATH }}/assets/images/channels4_profile.jpg" alt="Dot Net Liverpool Logo"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-expanded="false" aria-label="Toggle navigation">
-                  <i class="fa fa-bars"></i>
-                </button>
+                <a class="navbar-brand" href="{{ BASE_PATH }}">
+                  <img 
+                    id="dotnetlogo" 
+                    src="{{ BASE_PATH }}/assets/images/logo.svg" 
+                    alt="Dot Net Liverpool Logo"
+                  > 
+                </a>
+                  <button 
+                    class="navbar-toggler navbar-toggler-right mt-4 mt-lg-0" 
+                    type="button" 
+                    data-toggle="collapse" 
+                    data-target="#navbar1" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation"
+                  >
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                
                 <div class="collapse navbar-collapse justify-content-end" id="navbar1">
-                  <ul class="navbar-nav">
+                  <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     {% assign pages_list = site.pages %}
                     {% assign group = 'navigation' %}
                     {% include JB/pages_list %}
