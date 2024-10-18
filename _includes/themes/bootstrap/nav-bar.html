@@ -15,16 +15,11 @@
 
             <!-- navbar-default -->
             <nav class="navbar navbar-toggleable-md navbar-light bg-default py-0">
-              <div class="container">
-                <a class="navbar-brand" href="{{ BASE_PATH }}">
-                  <img 
-                    id="dotnetlogo" 
-                    src="{{ BASE_PATH }}/assets/images/logo.svg" 
-                    alt="Dot Net Liverpool Logo"
-                  > 
+                <a class="navbar-brand py-1" href="{{ BASE_PATH }}">
+                  {% include logo.svg %}
                 </a>
                   <button 
-                    class="navbar-toggler navbar-toggler-right mt-4 mt-lg-0" 
+                    class="navbar-toggler navbar-toggler-right mt-2 mt-md-1" 
                     type="button" 
                     data-toggle="collapse" 
                     data-target="#navbar1" 
@@ -34,7 +29,7 @@
                     <span class="navbar-toggler-icon"></span>
                   </button>
                 
-                <div class="collapse navbar-collapse justify-content-end" id="navbar1">
+                <div class="collapse navbar-collapse" id="navbar1">
                   <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     {% assign pages_list = site.pages %}
                     {% assign group = 'navigation' %}
@@ -49,5 +44,4 @@
                     </li>
                   </ul>
                 </div>
-              </div>
             </nav>
