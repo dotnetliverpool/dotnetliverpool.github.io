@@ -1,0 +1,7 @@
+{% for sponsor in site.sponsors %}
+           <div class="sponsors">
+               <a href="{{ sponsor.url }}" target="_blank" title="{{ sponsor.name }}">
+                    <img src="{{ site.baseurl }}/assets/img/sponsors/{{ site.image }}" alt="{{ site.name }}" />
+               </a>
+           </div>
+{% endfor %}
