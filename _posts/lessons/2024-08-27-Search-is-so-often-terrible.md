@@ -1,13 +1,13 @@
 ---
 layout: post
 category : lessons
-tagline: "Hello world post on helium jekyll"
-tags : [intro, beginner, jekyll, tutorial]
-img : helloworld.jpg
+tagline: "Search is so often terrible! We can improve it by Dan Roberts (Stack Overflow)"
+tags : [Search, Stackoverflow]
+img : /recordings/searchIsTerrible.JPG
 img-mobile : 
 img2 : 
 img3 : 
-author : Antonio Trento
+author : Dan Roberts
 title2 : 
 title3 : 
 css: 
@@ -15,6 +15,7 @@ js:
 bgcolor: ff5a71
 keywords: helium, html, css, landing page, jekyll, ruby, web marketing, advertising
 canonical: https://heliumjk.github.io
+view-link: https://www.youtube.com/watch?v=86E6c_2V3GA
 ---
 {% include JB/setup %}
 Hello world! Is the first post on helium jekyll
