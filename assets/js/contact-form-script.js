@@ -61,4 +61,10 @@ function submitMSG(valid, msg){
         var msgClasses = "h3 text-center text-danger";
     }
     $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
+
+    setTimeout(function() {
+        $("#msgSubmit").fadeOut("slow", function() {
+            $(this).removeClass().text(""); // Clear the text and classes
+        });
+    }, 3000);
 }
