@@ -15,33 +15,35 @@
 
             <!-- navbar-default -->
             <nav class="navbar navbar-toggleable-md navbar-light bg-default py-0">
-                <a class="navbar-brand py-1" href="{{ BASE_PATH }}">
-                  {% include logo.svg %}
-                </a>
-                  <button 
-                    class="navbar-toggler navbar-toggler-right mt-2 mt-md-1" 
-                    type="button" 
-                    data-toggle="collapse" 
-                    data-target="#navbar1" 
-                    aria-expanded="false" 
-                    aria-label="Toggle navigation"
-                  >
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
+              <a class="navbar-brand py-1 d-flex align-items-center" href="{{ BASE_PATH }}">
+                <span class="mr-1">{% include logo.svg %}</span>
+                <span>.Net Liverpool</span>
+              </a>
+
+              <button 
+                class="navbar-toggler navbar-toggler-right mt-1 mt-md-1" 
+                type="button" 
+                data-toggle="collapse" 
+                data-target="#navbar1" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
                 
-                <div class="collapse navbar-collapse" id="navbar1">
-                  <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                    {% assign pages_list = site.pages %}
-                    {% assign group = 'navigation' %}
-                    {% include JB/pages_list %}
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown link</a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+              <div class="collapse navbar-collapse" id="navbar1">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                  {% assign pages_list = site.pages %}
+                  {% assign group = 'navigation' %}
+                  {% include JB/pages_list %}
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown link</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </nav>
