@@ -16,6 +16,13 @@ baseurl: ""
 #include and exclude directories
 include: ["_pages"]
 
+
+# collections
+collections:
+  components:
+    output: true
+    permalink: /:collection/:title/
+
 #Google Ad Words Data from scripts code (using Google responsive options) and ad client
 data-ad-slot: 
 data-ad-client: 
