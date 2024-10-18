@@ -11,27 +11,36 @@ $("#contactForm").validator().on("submit", function (event) {
 });
 
 
-function submitForm(){
-    // Initiate Variables With Form Content
+async function submitForm(){
     var name = $("#name").val();
     var email = $("#email").val();
-    var msg_subject = $("#msg_subject").val();
     var message = $("#message").val();
 
+    var emailData = {
+        subject: `Contact Email from Dotnet Liverpool from ${email}`,
+        message: `Full Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+    };
 
-    $.ajax({
-        type: "POST",
-        url: "php/form-process.php",
-        data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&message=" + message,
-        success : function(text){
-            if (text == "success"){
-                formSuccess();
-            } else {
-                formError();
-                submitMSG(false,text);
-            }
-        }
-    });
+    try {
+        // Send the email via POST request
+        const response = await fetch(
+          'https://script.google.com/macros/s/AKfycbwDnes-AzTp2MdKMA5SXrsattoWA99tVAHkMKkjTjoAKpN_nJKVidSInaGxNbKnOjJiBg/exec', 
+        {
+          method: 'POST',
+          redirect: 'follow',
+          mode: 'no-cors',
+          cache: 'no-cache',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(emailData),
+        });
+  
+        formSuccess();
+      } catch (error) {
+        formError();
+        submitMSG(false, "An error occurred while sending the email.");
+      }
 }
 
 function formSuccess(){
