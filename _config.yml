@@ -30,7 +30,11 @@ google_ad_client:
 
 post_limit: 5
 
-
+sponsors: 
+    name: Hyperloop Recruitment
+    url: https://hyperlooprecruitment.com/
+    image: sponsors/HyperloopRecruitmentLogo.png
+    
 title : .NET Liverpool
 tagline: Liverpool's best community group for developers and tech enthusiasts 
 author : 
