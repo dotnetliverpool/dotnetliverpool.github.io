@@ -1,0 +1,46 @@
+.carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* For screens smaller than 481px */
+  @media (max-width: 480px) {
+
+    .carousel-inner {
+        height: 500px;
+    }
+
+    .carousel-item {
+        height: 500px; /* Set a fixed height for the carousel item on small screens */
+      }
+
+    .carousel-item img {
+        height: 500px;
+      max-height: 500px; 
+      object-fit: cover; /* Ensure the image covers the area */
+    }
+  
+    .carousel-caption {
+      padding: 0 10px; /* Adds padding to avoid text hitting edges */
+    }
+  }
+  
+  /* For screens between 481px and 576px */
+  @media (min-width: 481px) and (max-width: 576px) {
+    .carousel-item img {
+      height: 100vw; /* Square image on mobile */
+      object-fit: cover; /* Ensure the image covers the area */
+    }
+  }
+  
+    .carousel-caption {
+      padding: 0 10px; 
+    }
+
+
+  @media (min-width: 576px) and (max-width: 768px) {
+    .carousel-item img {
+      height: 100vw; 
+      object-fit: cover; 
+    }
+  }
