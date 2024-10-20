@@ -29,11 +29,6 @@ data-ad-client:
 google_ad_client: 
 
 post_limit: 5
-
-sponsors: 
-    name: Hyperloop Recruitment
-    url: https://hyperlooprecruitment.com/
-    image: sponsors/HyperloopRecruitmentLogo.png
     
 title : .NET Liverpool
 tagline: Liverpool's best community group for developers and tech enthusiasts 
@@ -160,3 +155,8 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
+
+
+
+## Donation
+donation_url: '#' #paypal accept donation link 
