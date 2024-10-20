@@ -33,8 +33,8 @@
                 
               <div class="collapse navbar-collapse" id="navbar1">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                  {% assign pages_list = site.pages %}
-                  {% assign group = 'navigation' %}
+                  {% assign pages_list = site.pages | where:"nav", true | sort: 'nav_order' %}
+                  
                   {% include JB/pages_list %}
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown link</a>
