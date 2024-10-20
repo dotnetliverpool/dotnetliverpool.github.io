@@ -8,3 +8,6 @@
 - Add a collection to _config.yaml (line 21).
 - create a directory with same name as collection prefixed with **_**
 - 
+
+# Run Command
+- `JEKYLL_ENV=development jeykyll serve`
