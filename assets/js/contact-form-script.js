@@ -1,20 +1,22 @@
 $("#contactForm").validator().on("submit", function (event) {
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
-        formError();
+        formError("#contactForm");
         submitMSG(false, "Did you fill in the form properly?");
     } else {
         // everything looks good!
         event.preventDefault();
-        submitForm();
+        sendContactEmail("#contactForm", "#name", "#email", "#message");
     }
 });
 
 
-async function submitForm(){
-    var name = $("#name").val();
-    var email = $("#email").val();
-    var message = $("#message").val();
+
+
+async function sendContactEmail(formID, nameID, emailID, messageID){
+    var name = $(nameID).val();
+    var email = $(emailID).val();
+    var message = $(messageID).val();
 
     var emailData = {
         subject: `Contact Email from Dotnet Liverpool from ${email}`,
@@ -36,20 +38,20 @@ async function submitForm(){
           body: JSON.stringify(emailData),
         });
   
-        formSuccess();
+        formSuccess(formID);
       } catch (error) {
-        formError();
+        formError(formID);
         submitMSG(false, "An error occurred while sending the email.");
       }
 }
 
-function formSuccess(){
-    $("#contactForm")[0].reset();
+function formSuccess(formID){
+    $(formID)[0].reset();
     submitMSG(true, "Message Submitted!")
 }
 
-function formError(){
-    $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+function formError(formID){
+    $(formID).removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $(this).removeClass();
     });
 }

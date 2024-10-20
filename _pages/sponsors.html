@@ -55,11 +55,38 @@ nav_order: 2
     <!-- Buttons Section -->
     <div class="row">
         <div class="col-12 d-flex justify-content-center">
-            <a href="#features" class="btn btn-lg btn-default-filled mx-2">Donate</a>
-            <a href="https://www.meetup.com/dot-net-liverpool" target="_blank" class="btn btn-lg btn-common mx-2">Become a sponsor</a>
+            <button data-toggle="modal" data-target="#becomeASponsorFormModal" target="_blank" class="btn btn-lg btn-default-filled mx-2">Become a sponsor</button>
+            <a href="{{ site.donation_url }}" class="btn btn-lg btn-common mx-2">Donate</a>
         </div>
     </div>
     <div class="mb-60"></div>
 
     
 </div>
+
+{% capture modal_form %}
+    <form id="becomeASponsorForm">
+        <div class="form-group">
+        <input type="text" class="form-control" id="name" placeholder="Full Name">
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" id="email" placeholder="Email Address">
+      </div>
+      
+      <div class="form-group">
+        <textarea class="form-control" id="message" placeholder="Message..."></textarea>
+      </div>
+      <div id="msgSubmit" class="h3 text-center hidden"></div>
+      <div class="clearfix"></div>
+    </form>
+  {% endcapture %}
+
+{% include modal.html 
+        id='becomeASponsorFormModal' 
+        aria_label='becomeASponsorModal'
+        title='Send Message'
+        title_id='becomeASponsorTitle'
+        content=modal_form
+        action_label='Send Message' 
+        action_function='sendContactEmail("#becomeASponsorForm","#name","#email","#message")'
+%}
