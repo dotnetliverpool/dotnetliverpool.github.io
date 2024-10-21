@@ -44,6 +44,8 @@ author :
   linkedin: dotnet-liverpool-meetup
   feedburner : 
 
+
+paypal_business_id: donate@dotnetliverpool.org.uk
 twitter_username: dotnetliverpool
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
@@ -156,7 +158,4 @@ JB :
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
 
-
-
-## Donation
-donation_url: '#' #paypal accept donation link 
+ 
