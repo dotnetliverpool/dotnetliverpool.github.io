@@ -44,6 +44,11 @@ author :
   linkedin: dotnet-liverpool-meetup
   feedburner : 
 
+sponsors:
+  - name: Hyperloop
+    url: https://hyperlooprecruitment.com/
+    image: sponsors/HyperloopRecruitmentLogo.png
+
 twitter_username: dotnetliverpool
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
