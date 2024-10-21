@@ -27,31 +27,20 @@ nav_order: 2
         <div class="col-12">
             <section class="customer-logos slider d-flex justify-content-center">
                 {% for sponsor in site.data.sponsors %}
-                <div class="slide">
-                    <a href="{{ sponsor.url }}" target="_blank">
-                        <img src="{{ sponsor.img }}" alt="{{ sponsor.alt }}">
-                    </a>
-                </div>
+                        <div class="col-md-4">
+                        <div class="card">
+                        <img class="card-img-top" src="{{ sponsor.img }}" alt="{{ sponsor.alt }}">
+                        <div class="card-block text-center">
+                            <p class="card-text">{{ sponsor.text }}</p>
+                            <a href="{{ sponsor.url }}" class="btn card-btn btn-common">Learn More</a>
+                        </div>
+                        </div>
+                    </div>
                 {% endfor %}
-                
-                
             </section>
         </div>
     </div>
     <div class="mb-40"></div>
-
-    <!-- Description Section -->
-    <div class="row">
-        <div class="col-12 text-center">
-            <blockquote>
-                <p>paragraph about sponsors: Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, harum qui unde nihil placeat et illo molestiae hic eius explicabo dolorem sint natus fugiat quo quae nesciunt. Eligendi, voluptate consectetur!</p>
-            </blockquote>  
-            
-            <blockquote>
-                <p>paragraph to encourage donation: Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, harum qui unde nihil placeat et illo molestiae hic eius explicabo dolorem sint natus fugiat quo quae nesciunt. Eligendi, voluptate consectetur!</p>
-            </blockquote>  
-        </div>
-    </div>
 
     <!-- Buttons Section -->
     <div class="row">
