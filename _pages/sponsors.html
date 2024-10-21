@@ -22,41 +22,43 @@ nav_order: 2
         </div>
     </div>
 
+    
+
     <!-- Logos Section (with slider or static layout) -->
     <div class="row">
-        <div class="col-12">
-            <section class="customer-logos slider d-flex justify-content-center">
-                {% for sponsor in site.data.sponsors %}
-                        <div class="col-md-4">
-                        <div class="card">
-                        <img class="card-img-top" src="{{ sponsor.img }}" alt="{{ sponsor.alt }}">
-                        <div class="card-block text-center">
-                            <p class="card-text">{{ sponsor.text }}</p>
-                            <a href="{{ sponsor.url }}" class="btn card-btn btn-common">Learn More</a>
-                        </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </section>
-        </div>
-    </div>
+      <div class="col-12">
+          <section class="customer-logos slider d-flex justify-content-center">
+              {% for sponsor in site.data.sponsors %}
+                <div class="slide d-flex justify-content-center">
+                  <div class="card">
+                      <img class="card-img-top" src="{{ sponsor.img }}" alt="{{ sponsor.alt }}">
+                      <div class="card-block text-center">
+                          <p class="card-text">{{ sponsor.text }}</p>
+                          <a href="{{ sponsor.url }}" class="btn card-btn btn-common">Learn More</a>
+                      </div>
+                  </div>
+                </div>
+              {% endfor %}
+          </section>
+      </div>
+  </div>
     <div class="mb-40"></div>
 
     <!-- Buttons Section -->
     <div class="row">
         <div class="col-12 d-flex justify-content-center px-3">
             <button data-toggle="modal" data-target="#becomeASponsorFormModal" target="_blank" class="btn btn-lg btn-default-filled mx-2">Become a sponsor</button>
-            <!-- <a href="{{ site.donation_url }} " class="btn btn-lg btn-common mx-2">Donate</a> -->
+            
             <div id="donate-button-container">
-                <div id="donate-button" class="btn btn-lg btn-common mx-2"></div>
-                <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-                <script>
-                  PayPal.Donation.Button({
-                    env: 'production',
-                    business : '{{ site.paypal_business_id }}',
-                  }).render('#donate-button');
-                </script>
-              </div>
+              <div id="donate-button" class="btn btn-lg btn-common mx-2"></div>
+              <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+              <script>
+                PayPal.Donation.Button({
+                  env: 'production',
+                  business : '{{ site.paypal_business_id }}',
+                }).render('#donate-button');
+              </script>
+            </div>
         </div>
     </div>
     <div class="mb-60"></div>
