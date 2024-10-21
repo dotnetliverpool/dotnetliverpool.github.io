@@ -23,7 +23,11 @@ nav_order: 1
             <div class="blog-post">
               <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
 	      <p>{{ post.excerpt }}</p>
+        {% if post.view-link %}	  
               <a class="btn btn-common" href="{{ post.view-link }}">View</a>
+        {% else %}
+              <a class="btn btn-common" href="{{ BASE_PATH }}{{ post.url }}">Read More</a>
+        {% endif %}
             </div>
           </div>
 	  <div class="mb-60"></div>
