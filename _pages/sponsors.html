@@ -27,27 +27,20 @@ nav_order: 2
         <div class="col-12">
             <section class="customer-logos slider d-flex justify-content-center">
                 {% for sponsor in site.data.sponsors %}
-                <div class="slide">
-                    <a href="{{ sponsor.url }}" target="_blank">
-                        <img src="{{ sponsor.img }}" alt="{{ sponsor.alt }}">
-                    </a>
-                </div>
+                        <div class="col-md-4">
+                        <div class="card">
+                        <img class="card-img-top" src="{{ sponsor.img }}" alt="{{ sponsor.alt }}">
+                        <div class="card-block text-center">
+                            <p class="card-text">{{ sponsor.text }}</p>
+                            <a href="{{ sponsor.url }}" class="btn card-btn btn-common">Learn More</a>
+                        </div>
+                        </div>
+                    </div>
                 {% endfor %}
-                
-                
             </section>
         </div>
     </div>
     <div class="mb-40"></div>
-
-    <!-- Description Section -->
-    <div class="row">
-        <div class="col-12 text-center">
-            <blockquote>
-                <p>Hyperloop Recruitment is a staffing agency that specialises in contract and permanent job placements in the UK, Ireland, US and the Netherlands. We are dedicated to finding the best candidates for rewarding positions and pride ourselves on our ability to match individuals with the right job for their qualifications and skills. Contact us to let us know what you're looking for and send us your CV so we can help you find your next career opportunity.</p>
-            </blockquote>  
-        </div>
-    </div>
 
     <!-- Buttons Section -->
     <div class="row">
