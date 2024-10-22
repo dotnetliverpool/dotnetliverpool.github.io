@@ -4,7 +4,7 @@ title: Recordings
 group: navigation
 tags : [blog, posts, post]
 author : Antonio Trento
-css: 
+css: /events.css
 js:
 keywords: bootstrap4, UI kit, jekyll
 canonical: https://heliumjk.github.io/blog
@@ -15,7 +15,123 @@ nav_order: 1
 {% include JB/setup %}
 
 
-{% for post in site.posts %}
+<div class="container">
+      <ul class="timeline">
+            <li>
+                  <div class="timeline-icon">
+                        <a href="javascript:;">&nbsp;</a>
+                  </div>
+
+                  <div class="timeline-body">
+                        <div class="card rounded">
+                              <div class="card-header px-2">
+                                    <p class="text-sm mb-1">24 March 2024</p>
+                              </div>
+
+                              <div class="card-body px-0">
+                                    <div class="image-overlay-container">
+                                          <img src="https://dev.dotnetliverpool.org.uk/assets/images//recordings/searchIsTerrible.JPG"
+                                                class="img-fluid" alt="Your Image">
+                                          <div class="overlay">
+                                                <blockquote class="content">
+                                                      <p>Search is often so terrible! <br> we can prove it...</p>
+                                                      <cite>- Dan Harris</cite>
+                                                </blockquote>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div class="card-footer text-muted d-flex justify-content-center">
+                                    <div class="social-links d-flex justify-content-between">
+                                          <a href="https://meetup.com"
+                                                class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
+                                                target="_blank">
+                                                <i class="fa fa-calendar icons"></i> RSVP
+                                          </a>
+                                          <a href="https://linkedin.com"
+                                                class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
+                                                target="_blank">
+                                                <i class="fa fa-map-marker icons"></i> Location
+                                          </a>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </li>
+
+
+            
+
+            <li>
+                  
+                  <div class="timeline-icon">
+                        <a href="javascript:;">&nbsp;</a>
+                  </div>
+                  
+                  <div class="timeline-body">
+                        <div class="card rounded">
+                              <div class="card-header px-2">
+                                    <p class="text-sm mb-1">24 March 2024</p>
+                                    <h5 class="card-title mb-1">Demystifying gRPC - with John Staveley</h5>
+                                    <p class="text-xs mb-1"><i class="fa fa-user icons mr-1"></i>John Staveley</p>
+
+                              </div>
+                              <!-- <div class="card-body px-0">
+                          
+                              <img class="px-0" src="{{ BASE_PATH }}/assets/images/recordings/DemystifyingGRPC.JPG" alt="Demysit image">
+                              
+                        </div> -->
+
+                              <div class="card-body px-0 d-flex">
+                                    <!-- Left Image (Takes Half the Space) -->
+                                    <div class="left-image" style="flex: 1;">
+                                          <img src="{{ BASE_PATH }}/assets/images/recordings/DemystifyingGRPC.JPG"
+                                                alt="Left Image" class="img-fluid">
+                                    </div>
+
+                                    <!-- Right Images (Stacked) -->
+                                    <div class="right-images d-flex flex-column" style="flex: 1;">
+                                          <img src="{{ BASE_PATH }}/assets/images/recordings/DemystifyingGRPC.JPG"
+                                                alt="Top Right Image" class="img-fluid mb-2">
+                                          <img src="{{ BASE_PATH }}/assets/images/recordings/DemystifyingGRPC.JPG"
+                                                alt="Bottom Right Image" class="img-fluid">
+                                    </div>
+                              </div>
+
+
+                              <div class="card-footer text-muted d-flex justify-content-center">
+                                    <!-- Social Links with Text -->
+                                    <div class="social-links d-flex justify-content-between">
+                                          <a href="https://youtube.com"
+                                                class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
+                                                target="_blank">
+                                                <i class="fa fa-play icons"></i> video
+                                          </a>
+                                          <a href="https://meetup.com"
+                                                class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
+                                                target="_blank">
+                                                <i class="fa fa-users icons"></i> people
+                                          </a>
+                                          <a href="https://linkedin.com"
+                                                class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
+                                                target="_blank">
+                                                <i class="fa fa-book icons"></i> read
+                                          </a>
+                                    </div>
+                              </div>
+                        </div>
+
+                  </div>
+                  
+            </li>
+
+
+
+      </ul>
+</div>
+
+
+<!-- {% for post in site.posts %}
 	  <div class="blog-block post-content-area">
 	   {% if post.img %}	  
             <img src="{{ BASE_PATH }}/assets/images/{{ post.img }}" alt="{{ post.title }} image">
@@ -31,5 +147,4 @@ nav_order: 1
             </div>
           </div>
 	  <div class="mb-60"></div>
-{% endfor %}
-
+{% endfor %} -->
