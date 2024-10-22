@@ -19,7 +19,7 @@ include: ["_pages"]
 
 # collections
 collections:
-  components:
+  events:
     output: true
     permalink: /:collection/:title/
 
