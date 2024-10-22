@@ -17,134 +17,97 @@ nav_order: 1
 
 <div class="container">
       <ul class="timeline">
-            <li>
-                  <div class="timeline-icon">
-                        <a href="javascript:;">&nbsp;</a>
-                  </div>
-
-                  <div class="timeline-body">
-                        <div class="card rounded">
-                              <div class="card-header px-2">
-                                    <p class="text-sm mb-1">24 March 2024</p>
-                              </div>
-
-                              <div class="card-body px-0">
-                                    <div class="image-overlay-container">
-                                          <img src="https://dev.dotnetliverpool.org.uk/assets/images//recordings/searchIsTerrible.JPG"
-                                                class="img-fluid" alt="Your Image">
-                                          <div class="overlay">
-                                                <blockquote class="content">
-                                                      <p>Search is often so terrible! <br> we can prove it...</p>
-                                                      <cite>- Dan Harris</cite>
-                                                </blockquote>
+            {% assign sorted_events = site.events | sort: 'date' | reverse %}
+            {% for event in sorted_events  %}
+                  <li>
+                        <div class="timeline-icon">
+                          <a href="javascript:;">&nbsp;</a>
+                        </div>
+                        <div class="timeline-body">
+                              <div class="card rounded">
+                                    {% if event.upcoming %}    
+                                          <div class="card-header px-2">
+                              <p class="text-sm mb-1"> {{ event.date | date: "%B %d, %Y" }}</p>
                                           </div>
-                                    </div>
-                              </div>
-
-                              <div class="card-footer text-muted d-flex justify-content-center">
-                                    <div class="social-links d-flex justify-content-between">
-                                          <a href="https://meetup.com"
-                                                class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
-                                                target="_blank">
-                                                <i class="fa fa-calendar icons"></i> RSVP
-                                          </a>
-                                          <a href="https://linkedin.com"
-                                                class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
-                                                target="_blank">
-                                                <i class="fa fa-map-marker icons"></i> Location
-                                          </a>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
-            </li>
-
-
-            
-
-            <li>
-                  
-                  <div class="timeline-icon">
-                        <a href="javascript:;">&nbsp;</a>
-                  </div>
-                  
-                  <div class="timeline-body">
-                        <div class="card rounded">
-                              <div class="card-header px-2">
-                                    <p class="text-sm mb-1">24 March 2024</p>
-                                    <h5 class="card-title mb-1">Demystifying gRPC - with John Staveley</h5>
-                                    <p class="text-xs mb-1"><i class="fa fa-user icons mr-1"></i>John Staveley</p>
-
-                              </div>
-                              <!-- <div class="card-body px-0">
-                          
-                              <img class="px-0" src="{{ BASE_PATH }}/assets/images/recordings/DemystifyingGRPC.JPG" alt="Demysit image">
-                              
-                        </div> -->
-
-                              <div class="card-body px-0 d-flex">
-                                    <!-- Left Image (Takes Half the Space) -->
-                                    <div class="left-image" style="flex: 1;">
-                                          <img src="{{ BASE_PATH }}/assets/images/recordings/DemystifyingGRPC.JPG"
-                                                alt="Left Image" class="img-fluid">
-                                    </div>
-
-                                    <!-- Right Images (Stacked) -->
-                                    <div class="right-images d-flex flex-column" style="flex: 1;">
-                                          <img src="{{ BASE_PATH }}/assets/images/recordings/DemystifyingGRPC.JPG"
-                                                alt="Top Right Image" class="img-fluid mb-2">
-                                          <img src="{{ BASE_PATH }}/assets/images/recordings/DemystifyingGRPC.JPG"
-                                                alt="Bottom Right Image" class="img-fluid">
-                                    </div>
-                              </div>
-
-
-                              <div class="card-footer text-muted d-flex justify-content-center">
-                                    <!-- Social Links with Text -->
-                                    <div class="social-links d-flex justify-content-between">
-                                          <a href="https://youtube.com"
-                                                class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
-                                                target="_blank">
-                                                <i class="fa fa-play icons"></i> video
-                                          </a>
-                                          <a href="https://meetup.com"
-                                                class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
-                                                target="_blank">
-                                                <i class="fa fa-users icons"></i> people
-                                          </a>
-                                          <a href="https://linkedin.com"
-                                                class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
-                                                target="_blank">
-                                                <i class="fa fa-book icons"></i> read
-                                          </a>
-                                    </div>
+                                    
+                                          <div class="card-body px-0">
+                                                <div class="image-overlay-container">
+                                                      <img src="{{BASE_PATH}}/assets/images/events/blank-template.jpg"
+                                                            class="img-fluid" alt="{{event.title}}">
+                                                      <div class="overlay">
+                                                            <blockquote class="content">
+                                                                  {{ event.content | markdownify }}
+                                                                  <cite>- {{event.author}}</cite>
+                                                            </blockquote>
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    
+                                          <div class="card-footer text-muted d-flex justify-content-center">
+                                                <div class="social-links d-flex justify-content-between">
+                                                      <a href="{{event.meetup-link}}"
+                                                            class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
+                                                            target="_blank">
+                                                            <i class="fa fa-calendar icons"></i> RSVP
+                                                      </a>
+                                                      <a href="{{site.location-link}}"
+                                                            class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
+                                                            target="_blank">
+                                                            <i class="fa fa-map-marker icons"></i> Location
+                                                      </a>
+                                                </div>
+                                          </div>
+                                    
+                                    {% else %}
+                                          <div class="card-header px-2">
+                                                <p class="text-sm mb-1">{{ event.date | date: "%B %d, %Y" }}</p>
+                                                <h5 class="card-title mb-1">{{ event.tagline }}</h5>
+                                                <p class="text-xs mb-1"><i class="fa fa-user icons mr-1"></i>{{ event.author }}</p>
+                                          </div>
+                                    
+                                          <div class="card-body px-0 d-flex">
+                                                <!-- Left Image (Takes Half the Space) -->
+                                                <div class="left-image" style="flex: 1;">
+                                                      <img src="{{ BASE_PATH }}/assets/images/events/{{event.left_image}}"
+                                                            alt="Left Image" class="img-fluid">
+                                                </div>
+                                          
+                                                <!-- Right Images (Stacked) -->
+                                                <div class="right-images d-flex flex-column" style="flex: 1;">
+                                                      <img src="{{ BASE_PATH }}/assets/images/events/{{event.right_top_image}}"
+                                                            alt="Top Right Image" class="img-fluid mb-2">
+                                                      <img src="{{ BASE_PATH }}/assets/images/events/{{event.right_bottom_image}}"
+                                                            alt="Bottom Right Image" class="img-fluid">
+                                                </div>
+                                          </div>
+                                    
+                                          <div class="card-footer text-muted d-flex justify-content-center">
+                                                <div class="social-links d-flex justify-content-between">
+                                                      {% if event.video-link %}
+                                                            <a href="{{event.video-link}}"
+                                                                  class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
+                                                                  target="_blank">
+                                                                  <i class="fa fa-play icons"></i> video
+                                                            </a>
+                                                      {% endif %}
+                                                      <a href="{{event.meetup-link}}"
+                                                            class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
+                                                            target="_blank">
+                                                            <i class="fa fa-users icons"></i> people
+                                                      </a>
+                                                      <a href="{{event.post-link}}"
+                                                            class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
+                                                            target="_blank">
+                                                            <i class="fa fa-book icons"></i> read
+                                                      </a>
+                                                </div>
+                                          </div>          
+                                    {% endif %}
                               </div>
                         </div>
-
-                  </div>
-                  
-            </li>
-
-
-
+                        </li>
+            {% endfor %}
       </ul>
 </div>
 
 
-<!-- {% for post in site.posts %}
-	  <div class="blog-block post-content-area">
-	   {% if post.img %}	  
-            <img src="{{ BASE_PATH }}/assets/images/{{ post.img }}" alt="{{ post.title }} image">
-	   {% endif %}	  
-            <div class="blog-post">
-              <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
-	      <p>{{ post.excerpt }}</p>
-        {% if post.view-link %}	  
-              <a class="btn btn-common" href="{{ post.view-link }}">View</a>
-        {% else %}
-              <a class="btn btn-common" href="{{ BASE_PATH }}{{ post.url }}">Read More</a>
-        {% endif %}
-            </div>
-          </div>
-	  <div class="mb-60"></div>
-{% endfor %} -->
