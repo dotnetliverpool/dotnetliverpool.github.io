@@ -121,3 +121,13 @@
     object-fit: contain; /* Ensures the image fits within the container without distortion */
     margin: 0 auto; /* Centers the image */
 }
+
+.survey-link {
+    color: #EB586F; 
+    text-decoration: underline; 
+}
+
+.survey-link:hover {
+    color: #560411; 
+    text-decoration: underline;
+}
