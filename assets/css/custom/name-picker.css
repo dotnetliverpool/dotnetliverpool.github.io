@@ -1,0 +1,51 @@
+.name-picker-box {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+    @media (max-width: 745px) {
+        .name-picker-box {
+            margin-top: 13.5rem;
+            margin-bottom: 13.5rem;
+        }
+    }
+
+.name-picker-box.increased-margin {
+    margin-top: 12.5rem;
+    margin-bottom: 12.5rem;
+}
+    
+    @media (max-width: 745px) {
+        .name-picker-box.increased-margin {
+            margin-top: 16rem;
+            margin-bottom: 16rem;
+        }
+    }
+
+.winner-display {
+    font-size: 2em;
+    margin-bottom: 20px;
+    transition: opacity 0.5s; /* Smooth transition for opacity */
+    border: 2px solid #EB586F; /* Add a border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding inside the border */
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    min-height: 130px;
+    width: 22rem;
+    white-space: normal;
+    line-height: 1.5;
+}
+
+
+.winner-text {
+    font-size: 2.5em;
+    margin-top: 20px;
+    color: #EB586F; /* Winner color */
+    display: none; /* Initially hidden */
+}
+
+.btn {
+    margin-top: 20px;
+}
