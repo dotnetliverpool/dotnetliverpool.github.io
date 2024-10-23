@@ -49,3 +49,21 @@
 .btn {
     margin-top: 20px;
 }
+
+.spinner-border {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    border: 0.25em solid currentColor;
+    border-radius: 50%;
+    animation: spinner-border 0.75s linear infinite;
+}
+
+@keyframes spinner-border {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
