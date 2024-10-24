@@ -28,9 +28,9 @@ collections:
 
 
 # Pagination Settings
-# pagination:
-#   enabled: true
-#   per_page: 3
+pagination:
+  enabled: true
+  per_page: 3
   
 
 #Google Ad Words Data from scripts code (using Google responsive options) and ad client

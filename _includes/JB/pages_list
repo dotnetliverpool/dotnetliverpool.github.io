@@ -25,10 +25,12 @@ Usage:
 
 {% for node in filtered_pages %}
   {% if node.title != null and node.autogen == null %}
-    {% if page.url == node.url %}
-      <li class="nav-item active"><a class="nav-link" href="{{ BASE_PATH }}{{ node.url }}">{{ node.title }}</a></li>
+  {% assign node_url = node.url | replace:'/index.html', '' %}
+  {% assign page_url = page.url | replace:'/index.html', '' %}
+    {% if page_url == node_url %}
+      <li class="nav-item active"><a class="nav-link" href="{{ BASE_PATH }}{{ node_url }}">{{ node.title }}</a></li>
     {% else %}
-      <li class="nav-item"><a class="nav-link" href="{{ BASE_PATH }}{{ node.url }}">{{ node.title }}</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ BASE_PATH }}{{ node_url }}">{{ node.title }}</a></li>
     {% endif %}
   {% endif %}
 {% endfor %}
