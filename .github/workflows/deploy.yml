@@ -1,44 +1,35 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Deploy gh-pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+    branches:
+      - master
 
 jobs:
   deploy:
-    # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
-      - name: Setup Ruby
+      - uses: actions/checkout@v3
+
+      - name: Prepare Ruby and Jekyll
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2.2"
-          bundler-cache: true
-      - name: Install and Build 🔧
-        run: |
-          export JEKYLL_ENV=production
-          bundle exec jekyll build
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+          ruby-version: '3.2.2'
+
+      - name: Install ruby dependencies
+        run: bundle install
+
+      - name: Build website
+        run: bundle exec jekyll build
+
+      - name: Deploy on gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          folder: _site
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
