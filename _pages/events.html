@@ -27,8 +27,9 @@ pagination:
 
 <div class="container">
       <ul class="timeline">
-            <!-- {% assign sorted_events = site.events | sort: 'date' | reverse %} -->
-            {% for event in paginator.posts  %}
+            {% assign sorted_events = site.events | sort: 'date' | reverse %}
+            <!-- {% for event in paginator.posts  %} -->
+            {% for event in sorted_events  %}
                   <li>
                         <div class="timeline-icon">
                           <a href="javascript:;">&nbsp;</a>
@@ -42,7 +43,7 @@ pagination:
                                     
                                           <div class="card-body px-0">
                                                 <div class="image-overlay-container">
-                                                      <img src="{{BASE_PATH}}/assets/images/events/blank-template_compressed.jpg"
+                                                      <img src="{{BASE_PATH}}/assets/images/events/blank-template.jpg"
                                                             class="img-fluid" alt="{{event.title}}">
                                                       <div class="overlay">
                                                             <blockquote class="content">
@@ -121,4 +122,4 @@ pagination:
 </div>
 
 
-{% include pagination.html %}
+<!-- {% include pagination.html %} -->
