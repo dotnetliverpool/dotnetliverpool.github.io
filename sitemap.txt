@@ -1,8 +1,13 @@
----
-# Remember to set production_url in your _config.yml file!
-title : Sitemap
----
-{% for page in site.pages %}
-{{site.production_url}}{{ page.url }}{% endfor %}
-{% for post in site.posts %}
-{{site.production_url}}{{ post.url }}{% endfor %}
+
+https://dev.dotnetliverpool.org.uk//404.html
+https://dev.dotnetliverpool.org.uk//archive
+https://dev.dotnetliverpool.org.uk//atom.xml
+https://dev.dotnetliverpool.org.uk//components/
+https://dev.dotnetliverpool.org.uk//events
+https://dev.dotnetliverpool.org.uk//
+https://dev.dotnetliverpool.org.uk//name-picker
+https://dev.dotnetliverpool.org.uk//rss.xml
+https://dev.dotnetliverpool.org.uk//sitemap.txt
+https://dev.dotnetliverpool.org.uk//sponsors
+https://dev.dotnetliverpool.org.uk//survey
+https://dev.dotnetliverpool.org.uk//tags
