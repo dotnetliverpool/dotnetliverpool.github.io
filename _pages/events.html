@@ -28,7 +28,7 @@ pagination:
 <div class="container">
       <ul class="timeline">
             {% assign sorted_events = site.events | sort: 'date' | reverse %}
-            <!-- {% for event in paginator.posts  %} -->
+            
             {% for event in sorted_events  %}
                   <li>
                         <div class="timeline-icon">
