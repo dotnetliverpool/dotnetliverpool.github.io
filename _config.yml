@@ -13,15 +13,25 @@ baseurl: "/dev.dotnetliverpool.org.uk" #
 # so be sure to set them if your theme uses them.
 
 
-#include and exclude directories
+#Include and exclude directories
 include: ["_pages"]
+exclude:
+  - Gemfile
+  - Gemfile.lock
 
 
-# collections
+# Collections
 collections:
   events:
     output: true
     permalink: /:collection/:title/
+
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 3
+  
 
 #Google Ad Words Data from scripts code (using Google responsive options) and ad client
 data-ad-slot: 
@@ -162,3 +172,8 @@ JB :
 raffle :
   sheetID : "1U1qG1OEmZSPgezx59ftDOzVKcmc0jWF-3R7FMSugbAY"
   nameColumn : "FULL NAME"
+
+
+# Plugins
+plugins:
+  - jekyll-paginate-v2

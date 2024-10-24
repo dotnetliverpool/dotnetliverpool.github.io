@@ -24,7 +24,7 @@ Usage:
 {% endif %}
 
 {% for node in filtered_pages %}
-  {% if node.title != null %}
+  {% if node.title != null and node.autogen == null %}
     {% if page.url == node.url %}
       <li class="nav-item active"><a class="nav-link" href="{{ BASE_PATH }}{{ node.url }}">{{ node.title }}</a></li>
     {% else %}
