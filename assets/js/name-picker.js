@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 function fetchNamesFromAPI() {
     const sheetID = $('#sheetID').val();  
-    const colName = $('#colName').val();  
+    const colName = $('#colName').val();
     const apiURL = 'https://script.google.com/macros/s/AKfycbwDnes-AzTp2MdKMA5SXrsattoWA99tVAHkMKkjTjoAKpN_nJKVidSInaGxNbKnOjJiBg/exec'
     return $.get(`${apiURL}?sheet_id=${sheetID}&column_name=${colName}`)
         .then(response => {
