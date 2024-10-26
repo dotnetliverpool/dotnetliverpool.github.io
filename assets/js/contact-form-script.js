@@ -6,21 +6,21 @@ $("#contactForm").validator().on("submit", function (event) {
     } else {
         // everything looks good!
         event.preventDefault();
-        sendContactEmail("#contactForm", "#name", "#email", "#message");
+        sendContactEmail("#contactForm", "#name", "#email", "#message", "input[name=cf-turnstile-response]");
     }
 });
 
 
-
-
-async function sendContactEmail(formID, nameID, emailID, messageID){
+async function sendContactEmail(formID, nameID, emailID, messageID, tokenID) {
     var name = $(nameID).val();
     var email = $(emailID).val();
     var message = $(messageID).val();
+    var token = $(tokenID).val();
 
     var emailData = {
         subject: `Contact Email from Dotnet Liverpool from ${email}`,
-        message: `Full Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+        message: `Full Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+        'cf-turnstile-response': token
     };
 
     try {
@@ -37,8 +37,12 @@ async function sendContactEmail(formID, nameID, emailID, messageID){
           },
           body: JSON.stringify(emailData),
         });
-  
-        formSuccess(formID);
+        if(response.success){
+            formSuccess(formID);
+        } else {
+            formError(formID);
+            submitMSG(false, response.message);
+        }
       } catch (error) {
         formError(formID);
         submitMSG(false, "An error occurred while sending the email.");
