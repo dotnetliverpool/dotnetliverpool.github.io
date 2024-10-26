@@ -52,10 +52,11 @@ lantoniotrento@gmail.com
 	<![endif]-->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    <!-- Cloudflare Turnstile -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <!-- Google ADS mobile block-->
     {% if site.google_ad_client %}
     <script type="text/javascript" async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script type="text/javascript">
      (adsbygoogle = window.adsbygoogle || []).push({
         google_ad_client: "{{ site.google_ad_client }}",
