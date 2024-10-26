@@ -41,7 +41,7 @@ async function sendContactEmail(formID, nameID, emailID, messageID, tokenID) {
             formSuccess(formID);
         } else {
             formError(formID);
-            submitMSG(false, response.message);
+            submitMSG(false, response.message || "An error occurred while sending the email.");
         }
       } catch (error) {
         formError(formID);
