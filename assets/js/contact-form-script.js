@@ -37,7 +37,7 @@ async function sendContactEmail(formID, nameID, emailID, messageID, tokenID) {
           },
           body: JSON.stringify(emailData),
         });
-        if(response.success){
+        if(response.status === "success"){
             formSuccess(formID);
         } else {
             formError(formID);
