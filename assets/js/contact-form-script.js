@@ -25,7 +25,7 @@ async function sendContactEmail(formID, nameID, emailID, messageID, tokenID) {
 
     try {
         // Send the email via POST request
-        const response = await fetch(
+        const request = await fetch(
           'https://script.google.com/macros/s/AKfycbx1i4nYkaF0Ge_zClQMFPveyxCZ6yiMG8kvqmTBWD_0NfTlU4TWOhXn6_P6WHmw1stzGg/exec', 
         {
           redirect: "follow",
@@ -35,6 +35,9 @@ async function sendContactEmail(formID, nameID, emailID, messageID, tokenID) {
           },
           body: JSON.stringify(emailData),
         });
+
+        let response = request.JSON();
+        
         if(response.status === "success"){
             formSuccess(formID);
         } else {
