@@ -36,7 +36,7 @@ async function sendContactEmail(formID, nameID, emailID, messageID, tokenID) {
           body: JSON.stringify(emailData),
         });
 
-        let response = request.json();
+        let response = await request.json();
         
         if(response.status === "success"){
             formSuccess(formID);
