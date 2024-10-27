@@ -30,8 +30,6 @@ async function sendContactEmail(formID, nameID, emailID, messageID, tokenID) {
         {
           redirect: "follow",
           method: 'POST',
-          mode: 'no-cors',
-          cache: 'no-cache',
           headers: {
             "Content-Type": "text/plain;charset=utf-8",
           },
