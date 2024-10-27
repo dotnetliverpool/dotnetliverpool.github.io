@@ -26,12 +26,9 @@ async function sendContactEmail(formID, nameID, emailID, messageID, tokenID) {
     try {
         // Send the email via POST request
         const response = await fetch(
-          'https://script.google.com/macros/s/AKfycbwiPBLdVDnNrh1xxJ6LKMsBaHfK8e_5ORdkCuWGyiFKZ4C0rxIP45uz1KamNqdGJq_AdA/exec', 
+          'https://script.google.com/macros/s/AKfycbyTYagsaQPe_fTYkbf8ZzeC6qNVtzyg7oBRBFjYMzVRiE2md5dR1JlRgbxo7DwRFBVjww/exec', 
         {
           method: 'POST',
-          redirect: 'follow',
-          mode: 'no-cors',
-          cache: 'no-cache',
           headers: {
             'Content-Type': 'application/json',
           },
