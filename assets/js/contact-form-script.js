@@ -28,12 +28,12 @@ async function sendContactEmail(formID, nameID, emailID, messageID, tokenID) {
         const response = await fetch(
           'https://script.google.com/macros/s/AKfycbyTYagsaQPe_fTYkbf8ZzeC6qNVtzyg7oBRBFjYMzVRiE2md5dR1JlRgbxo7DwRFBVjww/exec', 
         {
-          method: 'POST',
-          mode: 'cors',
-          cache: 'no-cache',
           redirect: "follow",
+          method: 'POST',
+          mode: 'no-cors',
+          cache: 'no-cache',
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "text/plain;charset=utf-8",
           },
           body: JSON.stringify(emailData),
         });
