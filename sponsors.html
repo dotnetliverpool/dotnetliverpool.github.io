@@ -428,6 +428,7 @@ lantoniotrento@gmail.com
       <div class="form-group">
         <textarea class="form-control" id="message" placeholder="Message..."></textarea>
       </div>
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAAyf-XxTdaBucEkV"></div>
       <div id="msgSubmit" class="h3 text-center hidden"></div>
       <div class="clearfix"></div>
     </form>
@@ -439,7 +440,7 @@ lantoniotrento@gmail.com
                 
                  Close
                 </button>
-            <button type="submit" class="btn std-btn btn-sm btn-filled" onclick=sendContactEmail("#becomeASponsorForm","#name","#email","#message")>
+            <button type="submit" class="btn std-btn btn-sm btn-filled" onclick=sendContactEmail("#becomeASponsorForm","#name","#email","#message","input[name=cf-turnstile-response]")>
                 
                  Send Message
             </button>
