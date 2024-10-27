@@ -29,6 +29,8 @@ async function sendContactEmail(formID, nameID, emailID, messageID, tokenID) {
           'https://script.google.com/macros/s/AKfycbyTYagsaQPe_fTYkbf8ZzeC6qNVtzyg7oBRBFjYMzVRiE2md5dR1JlRgbxo7DwRFBVjww/exec', 
         {
           method: 'POST',
+          mode: 'no-cors',
+          cache: 'no-cache',
           headers: {
             'Content-Type': 'application/json',
           },
