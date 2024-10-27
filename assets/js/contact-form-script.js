@@ -31,6 +31,7 @@ async function sendContactEmail(formID, nameID, emailID, messageID, tokenID) {
           method: 'POST',
           mode: 'no-cors',
           cache: 'no-cache',
+          redirect: "follow",
           headers: {
             'Content-Type': 'application/json',
           },
