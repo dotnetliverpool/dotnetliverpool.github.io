@@ -1,18 +1,17 @@
-# Helium Jekyll
+# Dot Net Liverpool Website built using Helium Jekyll
 ## A new Bootstrap 4 theme
 
-## The project is no longer mantained
+## The forked project is no longer maintained
 
 <a href="https://jekyll-themes.com">
     <img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
 </a>
 
-Helium is a fast, modern and configurable [Jekyll](http://jekyllrb.com/) theme with some tricks up it's sleeve. It has a live theme switcher and it's main blog layout display prominent hero images for posts with colored overlays and nice animations.
+Helium is a fast, modern, and configurable [Jekyll](http://jekyllrb.com/) theme with some tricks up it's sleeve. It has a live theme switcher and it's main blog layout display prominent hero images for posts with colored overlays and nice animations.
 
 [Bootstrap theme source](https://uideck.com/products/helium-ui-kit/)
 
-![helium sample](https://raw.githubusercontent.com/heliumjk/heliumjk.github.io/master/assets/images/helium-screenshot.jpg)
-![helium theme](https://raw.githubusercontent.com/heliumjk/heliumjk.github.io/master/assets/images/helium-screenshot1.jpg)
+![Dot Net Liverpool sample](https://github.com/dotnetliverpool/dotnetliverpool.github.io/blob/master/assets/images/website.JPG?raw=true)
 
 ## Features
 Though minimalistic-looking by nature, dactl is easily configurable and includes quite a lot of niceties:
@@ -57,7 +56,6 @@ Assuming you've got Jekyll [installed](https://jekyllrb.com/docs/installation/),
 Fork this repo and rename it to `yourusername.github.io`... and edit the `_config.yaml` file whit your github address and your links (such as social media username, email, name, ecc.)!  
 Your new helium-themed Jekyll blog should be up and running at yourusername.github.io.  
 
-
 ## Additional information about some features
 ### Hero images and blog layout
 Liquid 'script' which is used to append correct hero image and overlay color as set in post YAML Front matter was written by me and while it's really basic it functions properly.  
@@ -66,31 +64,5 @@ You can read more about it and see the code in `include/utils/hero.html`.
 #### Tags & Tags Pages
 Tags and tag pages are supported by using Jekyll's native collections functionality.  
 
-## Credits
-### Resources used
-- [Helium B4](https://uideck.com/products/helium-ui-kit/)
-- [Font Awesome](http://fontawesome.io/)
-- [Bootstrap 4](https://v4-alpha.getbootstrap.com/)
-
-### Inspiration and thoughtful code-jacking
-Inspiration and bits of things listed below are present inside dactl's code:
-- [Daktilo](https://github.com/kronik3r/daktilo) - dactl is based on Daktilo and inherits it's one-column layout.
-- [Hydejack](https://github.com/qwtel/hydejack/) - I've learned a lot about Jekyll when I took apart [@qwtel](https://github.com/qwtel/)'s excellent fork of [Hyde](https://github.com/poole/hyde) theme. I embraced his more partials = everything is easier to edit policy. Hydejack theme gave me an idea on how to create hero images liquid scripting, loading google fonts and using rem's/em's and more.
-- [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) - This guy makes awesome themes and writes a lot about Jekyll and it's more obscure use cases on his blog, [Made Mistakes](https://mademistakes.com). Looking through his theme's code - Minimal Mistakes in particular - gave me lot of information about how to build a robust theme and how to make it configurable within `_config.yml`
-- [Trophy](https://github.com/thomasvaeth/trophy-jekyll) - Link border slide animation SASS mixin which I slightly modified to be able to easily change the direction of the animation.
-- Various blog posts about Jekyll and [Stackoverflow](https://www.stackoverflow.com) posts with useful [Liquid](https://github.com/Shopify/liquid) snippets.
-
 ## License
 All parts of helium Jekyll theme are free to use and abuse under the open-source [MIT license](http://opensource.org/licenses/mit-license.php).
-
-## TO DO
-- [ ] Add Ads Block to home page 
-- [ ] Minimize `.css` in `<head>` and all images for faster load times
-- [ ] 404 page styles
-- [ ] Create hightlight style for code parts
-
-## Help out
-Im [Antonio Trento](https://antoniotrento.github.io) and I'm looking for funds to be able to open my IT development company with many on-site projects, unfortunately they are hardly feasible without collaboration and an economic base.
-
-If you want to contribute you can donate ethereum or bitcoin:
-- [Donate Bitcoins](https://blockchain.info/address/1B9rDoFCndbsKXL9QiefUcUGUbJH9Y1i6M)
