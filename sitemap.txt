@@ -9,6 +9,7 @@ https://dev.dotnetliverpool.org.uk//newsletter
 https://dev.dotnetliverpool.org.uk//rss.xml
 https://dev.dotnetliverpool.org.uk//sitemap.txt
 https://dev.dotnetliverpool.org.uk//sponsors
+https://dev.dotnetliverpool.org.uk//subscribed
 https://dev.dotnetliverpool.org.uk//survey
 https://dev.dotnetliverpool.org.uk//tags
 https://dev.dotnetliverpool.org.uk//events/index.html
