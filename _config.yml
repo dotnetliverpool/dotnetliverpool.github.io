@@ -25,6 +25,8 @@ collections:
   events:
     output: true
     permalink: /:collection/:title/
+  components:
+    output: true
 
 
 # Pagination Settings
