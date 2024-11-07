@@ -105,3 +105,8 @@
 .page-link:focus,.page-link:hover{
   color: #7d1e2b;
   }
+
+.fa-10x  {
+    width: 10rem;       
+    height: 10rem;
+}

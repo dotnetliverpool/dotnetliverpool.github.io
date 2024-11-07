@@ -10,11 +10,11 @@ lantoniotrento@gmail.com
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Archive</title>
-    <meta name="description" content="Every post blog in a list">
+    <title>Progress bars</title>
+    
     <meta name="author" content=".NET Liverpool">    
-    <meta name="keywords" content="grads, archive, posts, blog, jekyll, ruby, web marketing, advertising, Antonio Trento">
-    <link rel="canonical" href="https://grads.github.io/blog"/>
+    <meta name="keywords" content="components, demo">
+    <link rel="canonical" href="https://heliumjk.github.io"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Favicons -->
@@ -43,9 +43,9 @@ lantoniotrento@gmail.com
 	<!-- CSS loaded by the children page -->
         
 
-    <meta property="og:title" content="Archive">
-    <meta property="og:description" content="Every post blog in a list">
-    <meta property="og:image" content="/assets/img/big/3.jpg">
+    <meta property="og:title" content="Progress bars">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="/assets/img/big/">
     <meta property="og:url" content="">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -355,127 +355,215 @@ lantoniotrento@gmail.com
   
       
 
-  <!-- Blog content + sidebar -->
-  <section class="blog">
-    <div class="mb-60"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-9">
-
-           
 
 
-
-
-
-
-
-
-  
-
-
-
-     
-
-            
-
-
-  <div id="disqus_thread"></div>
-<script>
-
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_developer = 1;
-
-var disqus_config = function () {
-this.page.url = /archive;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = ; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = '//jeky-new-age.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-
-
-          
-
+    <!-- Content Area Start -->
+    <div id="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="page-header-title">
+              <h2 class="heading-title text-center">Progress Bars</h2>
+            </div>
+          </div>
         </div>
+        <!-- default progress bars -->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="sub-title">
+              Progress Bars
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-default animated fadeInLeft" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+              </div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-primary animated fadeInLeft" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+              </div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-success animated fadeInLeft" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+              </div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-info animated fadeInLeft" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+              </div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-warning animated fadeInLeft" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+              </div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-danger animated fadeInLeft" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+              </div>
+            </div>
 
-        <div class="col-sm-12 col-md-3">
-                    <div class="blog-block about-sidebar-widget">
-            <img src="/assets/images/channels4_profile.jpg">
-            <h4><a href="https://dev.dotnetliverpool.org.uk">.NET Liverpool</a></h4>
-            <p>Liverpool's best community group for developers and tech enthusiasts</p>
-                          <ul class="social-links">
-                
-                <li>
-                  <a data-toggle="tooltip" title="Seguici e scopri il gruppo segreto!" href="https://www.facebook.com/DotNetLiverpool/" title="Facebook" class="fa fa-facebook"></a>
-                </li>
-                
-                
-                <li>
-                  <a data-toggle="tooltip" title="Cinguettiamo insieme" href="https://twitter.com/dotnetliverpool" title="Twitter" class="fa fa-twitter"></a>
-                </li>
-                
-                
-                
-                <li>
-                  <a data-toggle="tooltip" title="Connettiti per collaborare" href="https://www.linkedin.com/company/dotnet-liverpool-meetup/" title="LinkedIn" class="fa fa-linkedin"></a>
-                </li>
-                
-              </ul>
+            <div class="mb-60"></div>
 
+            <h4 class="sub-title">Stacked</h4>
+            <!-- progress-bars stacked -->
+            <div class="progress">
+              <div class="progress-bar progress-bar-success animated fadeInLeft" style="width: 40%">
+              </div>
+              <div class="progress-bar progress-bar-warning animated fadeInLeft" style="width: 20%">
+              </div>
+              <div class="progress-bar progress-bar-danger animated fadeInLeft" style="width: 10%">
+              </div>
+            </div>
+
+            <div class="space-25"></div>
+
+            <div class="progress">
+              <div class="progress-bar progress-bar-primary animated fadeInLeft" style="width: 50%">
+              </div>
+              <div class="progress-bar progress-bar-info animated fadeInLeft" style="width: 30%">
+              </div>
+              <div class="progress-bar progress-bar-success animated fadeInLeft" style="width: 20%">
+              </div>
+            </div>
           </div>
 
-          <div class="mb-60"></div>
-          
-          <div class="blog-block blog-posts-widget side-bar sticky-top">
-            <div class="widget-title">
-              <h4>Sponsor</h4>
+          <!-- progress bars with labels -->
+          <div class="col-md-6">
+            <h4 class="sub-title">Progress Bars with Labels</h4>
+            <div class="progress progress-label">
+              <div class="progress-bar progress-bar-default animated fadeInLeft" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                <span class="sr-only">40%</span>
+              </div>
             </div>
-            <!-- ************************** sponsors  ***************************** -->
+            <div class="progress progress-label">
+              <div class="progress-bar progress-bar-primary animated fadeInLeft" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                <span class="sr-only">50%</span>
+              </div>
+            </div>
+            <div class="progress progress-label">
+              <div class="progress-bar progress-bar-success animated fadeInLeft" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                <span class="sr-only">60%</span>
+              </div>
+            </div>
+            <div class="progress progress-label">
+              <div class="progress-bar progress-bar-info animated fadeInLeft" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                <span class="sr-only">70%</span>
+              </div>
+            </div>
+            <div class="progress progress-label">
+              <div class="progress-bar progress-bar-warning animated fadeInLeft" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                <span class="sr-only">80%</span>
+              </div>
+            </div>
+            <div class="progress progress-label">
+              <div class="progress-bar progress-bar-danger animated fadeInLeft" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                <span class="sr-only">90%</span>
+              </div>
+            </div>
 
-           <div class="sponsors">
-               <a href="https://hyperlooprecruitment.com" target="_blank" title="Hyperloop Recruitment">
-                    <img src="/assets/images/sponsors/HyperloopRecruitmentLogo.png" alt="Hyperloop Recruitment" />
-               </a>
-           </div>
+            <div class="mb-60"></div>
 
-           <div class="sponsors">
-               <a href="https://www.jetbrains.com/" target="_blank" title="Jetbrains">
-                    <img src="/assets/images/sponsors/JetBrains_Logo.png" alt="Jetbrains" />
-               </a>
-           </div>
+            <h4 class="sub-title">Stacked with Labels</h4>
+            <!-- progress-bars stacked with labels -->
+            <div class="progress progress-label">
+              <div class="progress-bar progress-bar-success animated fadeInLeft" style="width: 40%">
+                <span class="sr-only">40%</span>
+              </div>
+              <div class="progress-bar progress-bar-warning animated fadeInLeft" style="width: 20%">
+                <span class="sr-only">20%</span>
+              </div>
+              <div class="progress-bar progress-bar-danger animated fadeInLeft" style="width: 10%">
+                <span class="sr-only">10%</span>
+              </div>
+            </div>
 
-          <div>
+            <div class="space-25"></div>
 
-        </div>          
+            <div class="progress progress-label">
+              <div class="progress-bar progress-bar-primary animated fadeInLeft" style="width: 50%">
+                <span class="sr-only">50%</span>
+              </div>
+              <div class="progress-bar progress-bar-info animated fadeInLeft" style="width: 30%">
+                <span class="sr-only">30%</span>
+              </div>
+              <div class="progress-bar progress-bar-success animated fadeInLeft" style="width: 20%">
+                <span class="sr-only">20%</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-     </div>
-   </section>
-          
+
+      <div class="mb-60"></div>
+
+      <div id="counter">
+        <div class="container">
+          <h4 class="sub-title">Counters</h4>
+          <div class="row count-to-sec">
+            <div class="col-md-3 col-sm-6 count-one">
+              <span class="icon"><i class="fa fa-download"> </i></span>
+              <h3 class="timer count-value" data-to="561" data-speed="1000">561</h3>
+              <hr class="width25-divider">
+              <small class="count-title">Downloads</small>
+            </div>
+
+            <div class="col-md-3 col-sm-6 count-one">
+              <span class="icon"><i class="fa fa-user"> </i></span>
+              <h3 class="timer count-value" data-to="950" data-speed="1000">950</h3>
+              <hr class="width25-divider">
+              <small class="count-title">Developers</small>
+            </div>
+
+            <div class="col-md-3 col-sm-6 count-one">
+              <span class="icon"><i class="fa fa-desktop"> </i></span>
+              <h3 class="timer count-value" data-to="978" data-speed="1000">978</h3>
+              <hr class="width25-divider">
+              <small class="count-title">Lines of code written</small>
+            </div>
+
+            <div class="col-md-3 col-sm-6 count-one">
+              <span class="icon"><i class="fa fa-coffee"> </i></span>
+              <h3 class="timer count-value" data-to="1700" data-speed="1000">1700</h3>
+              <hr class="width25-divider">
+              <small class="count-title">Cups of coffee consumed</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-60"></div>
+
+      <!-- facts 4col -->
+      <section id="facts">
+        <div class="container">
+          <h4 class="sub-title">Facts</h4>
+          <div class="row">
+            <div class="col-sm-6 col-md-3 text-center">
+              <i class="fact-icon fa fa-user"></i>
+              <h3 class="timer" id="websites" data-to="560" data-speed="1000">560</h3>
+              <h5 class="fact-title">Happy Clients</h5>
+            </div>
+            <div class="col-sm-6 col-md-3 text-center">
+              <i class="fact-icon fa fa-rocket"></i>
+              <h3 class="timer" id="code" data-to="2700" data-speed="1500">2700</h3>
+              <h5 class="fact-title">Project Lanched</h5>
+            </div>
+            <div class="col-sm-6 col-md-3 text-center">
+              <i class="fact-icon fa fa-coffee"></i>
+              <h3 class="timer" id="coffee" data-to="234" data-speed="2000">234</h3>
+              <h5 class="fact-title">Cup of Coffee</h5>
+            </div>
+            <div class="col-sm-6 col-md-3 text-center">
+              <i class="fact-icon fa fa-heart"></i>
+              <h3 class="timer" id="emails" data-to="234" data-speed="2500">970</h3>
+              <h5 class="fact-title">Peoples Love</h5>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- End facts 4 col -->
 
 
-
-
-
-
-     
-
-
-
-
-
+    </div>
+    <!-- Content Area End -->
+    <div class="text-center">Love this UI Kit? Get more Free and Premium <a href="https://uideck.com/products/category/ui-kits/">Bootstrap UI Kits</a> </div>
 
 
 
@@ -520,7 +608,7 @@ s.setAttribute('data-timestamp', +new Date());
 
 	<!-- ********************* Grads SCRIPTING ******************************-->
 	<!--Custom script loaded by children page-->
-	
+	<script src="/assets/js/progress-bar.js"></script>
 
 
 	  
