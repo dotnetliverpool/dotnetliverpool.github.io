@@ -54,14 +54,23 @@ pagination:
                                     
                                           <div class="card-footer text-muted d-flex justify-content-center">
                                                 <div class="social-links d-flex justify-content-between">
-                                                      <a href="{{event.meetup-link}}"
+                                                      <a href="{{event.url}}"
                                                             class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
-                                                            target="_blank">
+                                                      >
+                                                            <i class="fa fa-clock icons"></i> Countdown
+                                                      </a>
+                                                      <a 
+                                                            href="{{event.meetup-link}}"
+                                                            class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
+                                                            target="_blank"
+                                                      >
                                                             <i class="fa fa-calendar icons"></i> RSVP
                                                       </a>
-                                                      <a href="{{site.location-link}}"
+                                                      <a 
+                                                            href="{{site.location-link}}"
                                                             class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
-                                                            target="_blank">
+                                                            target="_blank"
+                                                      >
                                                             <i class="fa fa-map-marker icons"></i> Location
                                                       </a>
                                                 </div>
