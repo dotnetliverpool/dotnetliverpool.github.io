@@ -39,7 +39,12 @@ lantoniotrento@gmail.com
         <link rel="stylesheet" href="{{ BASE_PATH }}/assets/css/custom.css">	
 
 	<!-- CSS loaded by the children page -->
-        {% if page.css %}<link rel="stylesheet" type="text/css" href="{{ BASE_PATH }}/assets/css/custom/{{ page.css }}" />{% endif %}
+        {% if page.css %}
+          {% assign css_files = page.css | split: "," %}
+          {% for css_file in css_files %}
+            <link rel="stylesheet" type="text/css" href="{{ BASE_PATH }}/assets/css/custom/{{ css_file | strip }}" />
+          {% endfor %}
+        {% endif %}
 
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:description" content="{{ page.tagline }}">
@@ -104,7 +109,12 @@ lantoniotrento@gmail.com
 
 	<!-- ********************* Grads SCRIPTING ******************************-->
 	<!--Custom script loaded by children page-->
-	{% if page.js %}<script src="{{ BASE_PATH }}/assets/js/{{ page.js }}"></script>{% endif %}
+  {% if page.js %}
+    {% assign js_files = page.js | split: "," %}
+    {% for js_file in js_files %}
+      <script src="{{ BASE_PATH }}/assets/js/{{ js_file | strip }}"></script>
+    {% endfor %}
+  {% endif %}
 
 
 	  
