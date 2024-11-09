@@ -2,16 +2,22 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-9">
-                         
+          
+           {{ content }}                
         </div>                    
         <div class="col-sm-12 col-md-3">
-            <div class="blog-block blog-posts-widget side-bar sticky-top">
-                <div class="widget-title text-center">
-                  <h4>Sponsors</h4>
-                </div>
-                
-            <div>    
+            <section class="customer-logos slider d-flex justify-content-center">
+                {% for sponsor in site.data.sponsors %}
+                  <div class="slide d-flex justify-content-center">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ sponsor.img }}" alt="{{ sponsor.alt }}">
+                        <div class="slidesToShowFixed" data-slides-to-show="1">
+                        </div>
+                    </div>
+                  </div>
+                {% endfor %}
+            </section>
         </div>
       </div>
-     </div>
-   </section>
+    </div>
+</section>

@@ -1,27 +1,36 @@
 $(document).ready(function(){
-    var totalSlides = $('.customer-logos .slide').length;
+  var slidesToShow, responsiveTablet;
+  var totalSlides = $('.customer-logos .slide').length;
+  if ($('.slidesToShowFixed').length && $('.slidesToShowFixed').data('slides-to-show')) {
+    slidesToShow = parseInt($('.slidesToShowFixed').data('slides-to-show'), 10);
+    responsiveTablet = slidesToShow;
+    
+  } else {
+    slidesToShow = totalSlides < 3 ? totalSlides : 3;
+    responsiveTablet = totalSlides < 2 ? totalSlides : 2;
+  }
 
-    $('.customer-logos').slick({
-        slidesToShow: (totalSlides < 3 ? totalSlides : 3),
-        slidesToScroll: 1,
-        autoplay: true,
-        infinite: (totalSlides > 1),
-        autoplaySpeed: 1500,
-        arrows: false,
-        dots: false,
-        pauseOnHover: false,
-        responsive: [{
-            breakpoint: 900,
-            settings: {
-                slidesToShow: totalSlides < 2 ? totalSlides : 2
-            }
-        }, {
-            breakpoint: 745,
-            settings: {
-                slidesToShow: 1
-            }
-        }]
-    });
+  $('.customer-logos').slick({
+      slidesToShow: slidesToShow,
+      slidesToScroll: 1,
+      autoplay: true,
+      infinite: (totalSlides > 1),
+      autoplaySpeed: 1500,
+      arrows: false,
+      dots: false,
+      pauseOnHover: false,
+      responsive: [{
+          breakpoint: 900,
+          settings: {
+              slidesToShow: responsiveTablet
+          }
+      }, {
+          breakpoint: 745,
+          settings: {
+              slidesToShow: 1
+          }
+      }]
+  });
 
     function setEqualHeight() {
         var maxHeight = 0;
