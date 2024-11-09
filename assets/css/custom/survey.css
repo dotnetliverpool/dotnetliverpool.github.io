@@ -1,0 +1,9 @@
+.survey-link {
+    color: #EB586F; 
+    text-decoration: underline; 
+}
+
+.survey-link:hover {
+    color: #560411; 
+    text-decoration: underline;
+}
