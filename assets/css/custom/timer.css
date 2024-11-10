@@ -1,0 +1,30 @@
+/* Timer Box Styles */
+.timer-box {
+    background-color: #EB586F; /* Blue background */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    width: 100px; /* Set width for each box */
+}
+
+.time-number {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    padding-bottom: 0.12rem;
+}
+
+.time-label {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+/* Flexbox styling to align center */
+#countdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

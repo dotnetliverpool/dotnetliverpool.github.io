@@ -10,11 +10,11 @@ lantoniotrento@gmail.com
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Name Picker</title>
-    
+    <title>Xamarin Moving On</title>
+    <meta name="description" content="Xamarin: Moving On - with Mike Irving">
     <meta name="author" content=".NET Liverpool">    
-    <meta name="keywords" content="bootstrap4, UI kit, jekyll">
-    <link rel="canonical" href="https://heliumjk.github.io/blog"/>
+    <meta name="keywords" content="helium, html, css, landing page, jekyll, ruby, web marketing, advertising">
+    <link rel="canonical" href="https://heliumjk.github.io"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Favicons -->
@@ -44,18 +44,20 @@ lantoniotrento@gmail.com
         <meta property="outside">
 
         
-
-        
-        <meta property="exixts">
+        <meta property="exixts layout">
           
-            <link rel="stylesheet" type="text/css" href="/assets/css/custom//name-picker.css" />
+            <link rel="stylesheet" type="text/css" href="/assets/css/custom//slick-slider.css" />
+          
+            <link rel="stylesheet" type="text/css" href="/assets/css/custom//timer.css" />
           
         
 
         
 
-    <meta property="og:title" content="Name Picker">
-    <meta property="og:description" content="">
+        
+
+    <meta property="og:title" content="Xamarin Moving On">
+    <meta property="og:description" content="Xamarin: Moving On - with Mike Irving">
     <meta property="og:image" content="/assets/img/big/">
     <meta property="og:url" content="">
     <meta name="twitter:card" content="summary_large_image">
@@ -364,34 +366,82 @@ lantoniotrento@gmail.com
               </div>
             </nav>
   
-      <div id="namePickerContainer" class="container d-flex flex-column align-items-center justify-content-center name-picker-box">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <div class="page-header-title pb-2">
-                <h4 id="headingTitle" class="heading-title">Click start to select a winner</h4>
+      
+
+<section id="post" class="blog">
+    <div class="container">
+      <div class="row mt-20">
+        <div class="col-sm-12 col-md-9 mx-auto d-flex flex-wrap justify-content-center">
+          
+              <div class="d-flex flex-column align-items-center col-6 col-sm-4 col-md-3 col-lg-2 mb-3">
+                  <img src="/assets/images/2024_11_12_Mike_Irving_image.png" class="img-fluid rounded-circle" alt="Mike Irving" style="max-width: 100px;">
+                  <p>Mike Irving</p>
+              </div>
+          
+        
+          <!-- Title -->
+          <div class="d-flex flex-column align-items-center col-12 mb-3">
+              <h1 class="text-center">Xamarin: Moving On - with Mike Irving</h1>
+              <p><i class="fa fa-map-marker icons mr-1" ></i>17 Mann Island, Liverpool L3 1BP</p>
+          </div>
+
+          <div class="mb-60"></div>
+
+          <!-- Timer -->
+          
+          
+          <div id="countdown-timer" data-target-date="2024-11-12T18:30:00z" class="d-flex flex-wrap justify-content-center mb-3">
+            <div class="timer-box">
+                <span id="days" class="time-number">00</span>
+                <span class="time-label">Days</span>
             </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12 text-center">
-
-            <div id="headerNames" class="winner-display">
-                <span id="loadingSpinner" class="spinner-border spinner-border-lg" role="status" aria-hidden="true" style="display: none;"></span>
+            <div class="timer-box">
+                <span id="hours" class="time-number">00</span>
+                <span class="time-label">Hours</span>
             </div>
+            <div class="timer-box">
+                <span id="minutes" class="time-number">00</span>
+                <span class="time-label">Minutes</span>
+            </div>
+            <div class="timer-box">
+                <span id="seconds" class="time-number">00</span>
+                <span class="time-label">Seconds</span>
+            </div>
+          </div>
+
+          
+
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <button id="startButton" class="btn btn-lg btn-default-filled">Start</button>
+      </div>
+     
+      <div class="row d-flex flex-row justify-content-center">
+        <div class="col-sm-12 col-md-3">
+          <h6 class="mb-2 mt-2 text-center ">Sponsors</h6>
+          <section class="customer-logos slider d-flex justify-content-center">
+              
+                
+                  <div class="slide d-flex justify-content-center">
+                    <div class="card">
+                        <img class="card-img-top" src="/assets/images/sponsors/HyperloopRecruitmentLogo.png" alt="Hyperloop Recruitment">
+                        <div class="slidesToShowFixed" data-slides-to-show="1">
+                        </div>
+                    </div>
+                  </div>
+                
+                  <div class="slide d-flex justify-content-center">
+                    <div class="card">
+                        <img class="card-img-top" src="/assets/images/sponsors/JetBrains_Logo.png" alt="Jetbrains">
+                        <div class="slidesToShowFixed" data-slides-to-show="1">
+                        </div>
+                    </div>
+                  </div>
+                
+            </section>
         </div>
+      </div>
+      
     </div>
-
-    <input type="hidden" id="sheetID" value="1FXm3RikfHvJ-vCRpPzh8YWCHeFF14p37ZG-qxS-cAR8">
-    <input type="hidden" id="colName" value="FULL NAME">
-
-</div>
+</section>
             <!-- Footer -->
       <footer class="default-footer text-center">
         <div class="container">
@@ -433,11 +483,13 @@ lantoniotrento@gmail.com
 	<!-- ********************* Grads SCRIPTING ******************************-->
 	<!--Custom script loaded by children page-->
   
-
+    
+      <script src="/assets/js//slick-slider.js"></script>
+    
+      <script src="/assets/js//timer.js"></script>
+    
   
-    
-      <script src="/assets/js//name-picker.js"></script>
-    
+
   
 
 
