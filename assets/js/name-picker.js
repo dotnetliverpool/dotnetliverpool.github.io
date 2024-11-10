@@ -45,11 +45,13 @@ function fetchNamesFromAPI() {
                 return response.data;  
             } else {
                 alert('Error: ' + response.message);
+                console.log('Error: ' + response.message);
                 return [];
             }
         })
         .catch(error => {
-            alert('Error fetching data from API');
+            alert('Failure Fetching Names: ' + error.message)
+            console.log('Failure Fetching Names' + error.message)
             return [];
         });
 }
