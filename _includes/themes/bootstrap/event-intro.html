@@ -1,12 +1,54 @@
 <section id="post" class="blog">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-9">
+      <div class="row mt-20">
+        <div class="col-sm-12 col-md-9 mx-auto d-flex flex-wrap justify-content-center">
+          {% for author in page.authors %}
+              <div class="d-flex flex-column align-items-center col-6 col-sm-4 col-md-3 col-lg-2 mb-3">
+                  <img src="{{ author.image }}" class="img-fluid rounded-circle" alt="{{ author.name }}" style="max-width: 100px;">
+                  <p>{{ author.name }}</p>
+              </div>
+          {% endfor %}
+        
+          <!-- Title -->
+          <div class="d-flex flex-column align-items-center col-12 mb-3">
+              <h1 class="text-center">{{ page.tagline }}</h1>
+              <p><i class="fa fa-map-marker icons mr-1" ></i>17 Mann Island Liverpool</p>
+          </div>
+
+          <div class="mb-60"></div>
+
+          <!-- Timer -->
+          {% assign formatted_date = page.date | date: "%Y-%m-%d" %}
+          {% assign target_date = formatted_date | append: "T" | append: page.event_time | append: "z" %}
+          <div id="countdown-timer" data-target-date="{{target_date}}" class="d-flex flex-wrap justify-content-center mb-3">
+            <div class="timer-box">
+                <span id="days" class="time-number">00</span>
+                <span class="time-label">Days</span>
+            </div>
+            <div class="timer-box">
+                <span id="hours" class="time-number">00</span>
+                <span class="time-label">Hours</span>
+            </div>
+            <div class="timer-box">
+                <span id="minutes" class="time-number">00</span>
+                <span class="time-label">Minutes</span>
+            </div>
+            <div class="timer-box">
+                <span id="seconds" class="time-number">00</span>
+                <span class="time-label">Seconds</span>
+            </div>
+          </div>
+
           
-           {{ content }}                
-        </div>                    
+
+        </div>
+      </div>
+     
+      <div class="row d-flex flex-row justify-content-center">
         <div class="col-sm-12 col-md-3">
-            <section class="customer-logos slider d-flex justify-content-center">
+          <h6 class="mb-2 mt-2 text-center ">Sponsors</h6>
+          <section class="customer-logos slider d-flex justify-content-center">
+              
                 {% for sponsor in site.data.sponsors %}
                   <div class="slide d-flex justify-content-center">
                     <div class="card">
@@ -19,5 +61,6 @@
             </section>
         </div>
       </div>
+      
     </div>
 </section>
