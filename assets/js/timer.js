@@ -7,6 +7,8 @@ const targetDateInUK = new Date(
 );
 const countdownDate = targetDateInUK.getTime();
 
+let countdownInterval;
+
 function updateCountdown() {
     const now = new Date().getTime();
     const distance = countdownDate - now;
@@ -29,8 +31,10 @@ function updateCountdown() {
         document.getElementById("hours").textContent = "00";
         document.getElementById("minutes").textContent = "00";
         document.getElementById("seconds").textContent = "00";
+
+        clearInterval(countdownInterval);
     }
 }
 
 // Update the countdown every second
-setInterval(updateCountdown, 1000);
+countdownInterval =  setInterval(updateCountdown, 1000);
