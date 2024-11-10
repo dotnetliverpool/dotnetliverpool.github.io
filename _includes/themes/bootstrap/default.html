@@ -40,8 +40,7 @@ lantoniotrento@gmail.com
 
 	<!-- CSS loaded by the children page -->
         {% if page.css %}
-          {% assign css_files = page.css | split: "," %}
-          {% for css_file in css_files %}
+          {% for css_file in page.css %}
             <link rel="stylesheet" type="text/css" href="{{ BASE_PATH }}/assets/css/custom/{{ css_file | strip }}" />
           {% endfor %}
         {% endif %}
@@ -110,8 +109,7 @@ lantoniotrento@gmail.com
 	<!-- ********************* Grads SCRIPTING ******************************-->
 	<!--Custom script loaded by children page-->
   {% if page.js %}
-    {% assign js_files = page.js | split: "," %}
-    {% for js_file in js_files %}
+    {% for js_file in page.js %}
       <script src="{{ BASE_PATH }}/assets/js/{{ js_file | strip }}"></script>
     {% endfor %}
   {% endif %}
