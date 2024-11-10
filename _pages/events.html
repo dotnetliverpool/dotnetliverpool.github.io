@@ -46,7 +46,7 @@ pagination:
                                                       <div class="overlay">
                                                             <blockquote class="content">
                                                                   {{ event.content | markdownify }}
-                                                                  <cite>- {{event.author}}</cite>
+                                                                  <cite>- {{ event.authors | map: 'name' | join: ', ' }}</cite>
                                                             </blockquote>
                                                       </div>
                                                 </div>
@@ -80,7 +80,10 @@ pagination:
                                           <div class="card-header px-2">
                                                 <p class="text-sm mb-1">{{ event.date | date: "%B %d, %Y" }}</p>
                                                 <h5 class="card-title mb-1">{{ event.tagline }}</h5>
-                                                <p class="text-xs mb-1"><i class="fa fa-user icons mr-1"></i>{{ event.author }}</p>
+                                                <p class="text-xs mb-1">
+                                                      <i class="fa fa-user icons mr-1"></i>
+                                                      {{ event.authors | map: 'name' | join: ', ' }}
+                                                </p>
                                           </div>
                                     
                                           <div class="card-body px-0 d-flex">

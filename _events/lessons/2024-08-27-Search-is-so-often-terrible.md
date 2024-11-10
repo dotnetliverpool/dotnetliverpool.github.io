@@ -7,7 +7,9 @@ tags : [Search, Stackoverflow]
 left_image : /2024_08_search_is_terrible_dan_left_image.jpeg
 right_top_image: /2024_08_search_is_terrible_dan_right_top_image.jpeg
 right_bottom_image: /2024_08_search_is_terrible_dan_right_bottom_image.jpeg
-author : Dan Roberts
+authors : 
+    - name: Dan Roberts
+      image: /
 keywords: helium, html, css, landing page, jekyll, ruby, web marketing, advertising
 canonical: https://heliumjk.github.io
 meetup-link: https://www.meetup.com/dot-net-liverpool/events/300445750
