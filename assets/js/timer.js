@@ -3,7 +3,7 @@ const countdownTimer = document.getElementById("countdown-timer");
 const targetDateString = countdownTimer.getAttribute("data-target-date");
 
 const targetDateInUK = new Date(
-    new Date(targetDateString).toLocaleString("en-US", { timeZone: "Europe/London" })
+    Date.parse(targetDateString)
 );
 const countdownDate = targetDateInUK.getTime();
 

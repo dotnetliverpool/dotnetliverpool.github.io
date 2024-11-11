@@ -19,7 +19,7 @@
 
           <!-- Timer -->
           {% assign formatted_date = page.date | date: "%Y-%m-%d" %}
-          {% assign target_date = formatted_date | append: "T" | append: page.event_time | append: "z" %}
+          {% assign target_date = formatted_date | append: "T" | append: page.event_time | append: "Z" %}
           <div id="countdown-timer" data-target-date="{{target_date}}" class="d-flex flex-wrap justify-content-center mb-3">
             <div class="timer-box">
                 <span id="days" class="time-number">00</span>
