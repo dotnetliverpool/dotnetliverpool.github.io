@@ -2,7 +2,7 @@
 layout: event
 category : lessons
 date: 2024-11-12
-event_time: "18:50:00"
+event_time: "19:00:00"
 tagline: "Xamarin: Moving On - with Mike Irving"
 tags : [Search, Stackoverflow]
 left_image : / # left image name only found in assets/images/events
