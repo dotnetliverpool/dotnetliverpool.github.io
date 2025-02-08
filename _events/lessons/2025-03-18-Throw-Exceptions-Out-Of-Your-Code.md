@@ -15,7 +15,7 @@ keywords: exceptions, Developer, Fun Meetup
 canonical: https://heliumjk.github.io
 meetup-link: https://www.meetup.com/dot-net-liverpool/events/305497180/
 post-link: https://  # linkedIn post url
-video-link: https://  # youtube video url if recorded
+video-link: https://www.youtube.com/watch?v=gFjmMW1W8D0  # youtube video url if recorded
 upcoming: true
 ---
 {% include JB/setup %}

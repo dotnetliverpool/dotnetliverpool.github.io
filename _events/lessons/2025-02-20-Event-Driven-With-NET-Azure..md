@@ -15,7 +15,7 @@ keywords: Azure, Event Driven, Developer, Fun Meetup
 canonical: https://heliumjk.github.io
 meetup-link: https://www.meetup.com/dot-net-liverpool/events/304396068/
 post-link: https://  # linkedIn post url
-video-link: https://  # youtube video url if recorded
+video-link: https://www.youtube.com/watch?v=NIjhuBsMG30  # youtube video url if recorded
 upcoming: true
 ---
 {% include JB/setup %}
