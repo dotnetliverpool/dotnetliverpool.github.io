@@ -14,3 +14,4 @@ https://dev.dotnetliverpool.org.uk//survey
 https://dev.dotnetliverpool.org.uk//tags
 https://dev.dotnetliverpool.org.uk//events/index.html
 https://dev.dotnetliverpool.org.uk//events/2/index.html
+https://dev.dotnetliverpool.org.uk//events/3/index.html
