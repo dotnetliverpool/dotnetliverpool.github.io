@@ -21,4 +21,4 @@ upcoming: true
 {% include JB/setup %}
 
 
-Throw exceptions... out of your codebase - Guillaume Faas
+Design & Develop Windows Widgets via Generative AI 
