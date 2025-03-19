@@ -21,4 +21,4 @@ upcoming: true
 {% include JB/setup %}
 
 
-Design & Develop Windows Widgets via Generative AI 
+Rust for .NET Developers with - James Eastham
