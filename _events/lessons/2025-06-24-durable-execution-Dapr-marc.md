@@ -21,4 +21,4 @@ upcoming: true
 {% include JB/setup %}
 
 
-Failure is not an option: durable execution + Dapr = 🚀 
+Failure is not an option: durable execution + Dapr 
