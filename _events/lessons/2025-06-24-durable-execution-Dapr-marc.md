@@ -3,7 +3,7 @@ layout: event
 category : lessons
 date: 2025-06-24
 event_time: "18:50:00"
-tagline: "Failure is not an option: durable execution + Dapr with Marc Duiker
+tagline: "Failure is not an option: durable execution + Dapr with Marc Duiker"
 tags : [.net, Dapr ]
 left_image : / # left image name only found in assets/images/events
 right_top_image: / # right top image name only found in assets/images/events
