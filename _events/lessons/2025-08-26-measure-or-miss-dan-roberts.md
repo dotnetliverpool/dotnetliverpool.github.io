@@ -1,7 +1,7 @@
 ---
 layout: event
 category : lessons
-date: 2025-07-29
+date: 2025-08-26
 event_time: "18:50:00"
 tagline: "Measure or Miss: Why Metrics Matter in Software with Dan Roberts"
 tags : [.net, metric, dora ]
