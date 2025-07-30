@@ -5,18 +5,18 @@ date: 2025-07-29
 event_time: "18:50:00"
 tagline: ".Net NanoFramework on a Cheap Yellow Display with Andy Clark"
 tags : [.net, Nanoframework ]
-left_image : / # left image name only found in assets/images/events
-right_top_image: / # right top image name only found in assets/images/events
-right_bottom_image: / # right bottom image name only found in assets/images/events
+left_image : /2025_07_29_Andy_Clark_Left.jpeg  # left image name only found in assets/images/events
+right_top_image: /2025_07_29_Andy_Clark_Right.jpeg # right top image name only found in assets/images/events
+right_bottom_image: /2025_07_29_Andy_Clark_Buttom.jpeg # right bottom image name only found in assets/images/events
 authors : 
     - name: Andy Clark
       image: /2025_07-29_AndyClark.jpeg
 keywords: durable, Dapr, Fun Meetup
 canonical: https://heliumjk.github.io
 meetup-link: https://www.meetup.com/dot-net-liverpool/events/306516419
-post-link:   # linkedIn post url
-video-link:   # youtube video url if recorded
-upcoming: true
+post-link: https://www.linkedin.com/feed/update/urn:li:activity:7343931369644863488/?actorCompanyId=35500862 # linkedIn post url
+video-link: https://www.youtube.com/watch?v=PVo6Vx4zfJ4  # youtube video url if recorded
+upcoming: false
 ---
 {% include JB/setup %}
 
