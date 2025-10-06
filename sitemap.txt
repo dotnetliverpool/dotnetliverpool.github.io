@@ -4,6 +4,7 @@ https://dev.dotnetliverpool.org.uk//archive
 https://dev.dotnetliverpool.org.uk//atom.xml
 https://dev.dotnetliverpool.org.uk//components/
 https://dev.dotnetliverpool.org.uk//
+https://dev.dotnetliverpool.org.uk//lightening-talks-instructions
 https://dev.dotnetliverpool.org.uk//name-picker
 https://dev.dotnetliverpool.org.uk//newsletter
 https://dev.dotnetliverpool.org.uk//rss.xml
