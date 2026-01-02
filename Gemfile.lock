@@ -3,9 +3,11 @@ GEM
   specs:
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
+    base64 (0.3.0)
     bigdecimal (3.1.8)
     colorator (1.1.0)
     concurrent-ruby (1.3.4)
+    csv (3.3.5)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -73,6 +75,7 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.7.0)
     mercenary (0.4.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -108,6 +111,8 @@ GEM
     sass-embedded (1.80.4-riscv64-linux-gnu)
       google-protobuf (~> 4.28)
     sass-embedded (1.80.4-riscv64-linux-musl)
+      google-protobuf (~> 4.28)
+    sass-embedded (1.80.4-x64-mingw-ucrt)
       google-protobuf (~> 4.28)
     sass-embedded (1.80.4-x86-cygwin)
       google-protobuf (~> 4.28)
@@ -150,6 +155,7 @@ PLATFORMS
   riscv64-linux-gnu
   riscv64-linux-musl
   ruby
+  x64-mingw-ucrt
   x86-cygwin
   x86-linux
   x86-linux-android
@@ -163,7 +169,10 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  base64
+  csv
   jekyll-paginate-v2 (>= 3.0)
+  logger
 
 BUNDLED WITH
    2.5.21

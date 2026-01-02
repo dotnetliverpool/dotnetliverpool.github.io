@@ -90,16 +90,31 @@ pagination:
                                           <div class="card-body px-0 d-flex">
                                                 <!-- Left Image (Takes Half the Space) -->
                                                 <div class="left-image" style="flex: 1;">
-                                                      <img src="{{ BASE_PATH }}/assets/images/events/{{event.left_image}}"
-                                                            alt="Left Image" class="img-fluid">
+                                                      {% if event.left_image contains 'http://' or event.left_image contains 'https://' %}
+                                                            <img src="{{ event.left_image }}"
+                                                                  alt="Left Image" class="img-fluid">
+                                                      {% else %}
+                                                            <img src="{{ BASE_PATH }}/assets/images/events/{{event.left_image}}"
+                                                                  alt="Left Image" class="img-fluid">
+                                                      {% endif %}
                                                 </div>
                                           
                                                 <!-- Right Images (Stacked) -->
                                                 <div class="right-images d-flex flex-column" style="flex: 1;">
-                                                      <img src="{{ BASE_PATH }}/assets/images/events/{{event.right_top_image}}"
-                                                            alt="Top Right Image" class="img-fluid mb-2">
-                                                      <img src="{{ BASE_PATH }}/assets/images/events/{{event.right_bottom_image}}"
-                                                            alt="Bottom Right Image" class="img-fluid">
+                                                      {% if event.right_top_image contains 'http://' or event.right_top_image contains 'https://' %}
+                                                            <img src="{{ event.right_top_image }}"
+                                                                  alt="Top Right Image" class="img-fluid mb-2">
+                                                      {% else %}
+                                                            <img src="{{ BASE_PATH }}/assets/images/events/{{event.right_top_image}}"
+                                                                  alt="Top Right Image" class="img-fluid mb-2">
+                                                      {% endif %}
+                                                      {% if event.right_bottom_image contains 'http://' or event.right_bottom_image contains 'https://' %}
+                                                            <img src="{{ event.right_bottom_image }}"
+                                                                  alt="Bottom Right Image" class="img-fluid">
+                                                      {% else %}
+                                                            <img src="{{ BASE_PATH }}/assets/images/events/{{event.right_bottom_image}}"
+                                                                  alt="Bottom Right Image" class="img-fluid">
+                                                      {% endif %}
                                                 </div>
                                           </div>
                                     
