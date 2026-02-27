@@ -6,6 +6,7 @@ https://dev.dotnetliverpool.org.uk//components/
 https://dev.dotnetliverpool.org.uk//how-to-find-us
 https://dev.dotnetliverpool.org.uk//
 https://dev.dotnetliverpool.org.uk//lightening-talks-instructions
+https://dev.dotnetliverpool.org.uk//map
 https://dev.dotnetliverpool.org.uk//name-picker
 https://dev.dotnetliverpool.org.uk//newsletter
 https://dev.dotnetliverpool.org.uk//rss.xml
