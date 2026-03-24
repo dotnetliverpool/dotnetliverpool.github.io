@@ -15,8 +15,8 @@ keywords: Technical Architecture,.NET, Fun Meetup
 canonical: https://heliumjk.github.io
 meetup-link: https://www.meetup.com/dot-net-liverpool/events/312911119/
 post-link:  
-video-link: https://www.youtube.com/watch?v=7LaWZPBHw8A # youtube video url if recorded
-upcoming: true
+video-link: https://www.youtube.com/watch?v=F2AwX46PVe0 # youtube video url if recorded
+upcoming: false
 ---
 {% include JB/setup %}
 
