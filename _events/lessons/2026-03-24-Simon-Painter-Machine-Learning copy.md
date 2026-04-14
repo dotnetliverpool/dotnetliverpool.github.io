@@ -7,7 +7,7 @@ tagline: "From Ancient Greeks to Modern Geeks - Basic Machine Learning Algorithm
 tags : [.net, Machine Learning Algorithms, History]
 left_image : https://secure.meetupstatic.com/photos/event/6/b/c/9/highres_533367593.webp
 right_top_image: https://secure.meetupstatic.com/photos/event/6/b/c/a/highres_533367594.webp
-right_bottom_image:https://secure.meetupstatic.com/photos/event/6/b/c/d/highres_533367597.webp
+right_bottom_image: https://secure.meetupstatic.com/photos/event/6/b/c/d/highres_533367597.webp
 authors : 
     - name: Simon Painter
       image: https://secure-content.meetupstatic.com/images/classic-events/532695591/100x100.webp
