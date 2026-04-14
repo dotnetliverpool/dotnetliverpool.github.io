@@ -5,9 +5,9 @@ date: 2026-04-28
 event_time: "18:40:00"
 tagline: "Power Platform for Good! And Designing Self-Healing Pipelines"
 tags : [.net, Power Platform, Pipelines]
-left_image : https://secure.meetupstatic.com/photos/event/6/b/c/9/highres_533367593.webp
-right_top_image: https://secure.meetupstatic.com/photos/event/6/b/c/a/highres_533367594.webp
-right_bottom_image:https://secure.meetupstatic.com/photos/event/6/b/c/d/highres_533367597.webp
+left_image : 
+right_top_image: 
+right_bottom_image: 
 authors : 
     - name: Melissa Hale
       image: https://media.licdn.com/dms/image/v2/D4E03AQEGhjI2kT_aFg/profile-displayphoto-shrink_400_400/B4EZal0qIiHoAk-/0/1746538767544?e=1777507200&v=beta&t=9swFI3BLgMrEZpXfZ0BOhhOdPChIsYeVI1UHlYO32Y0
