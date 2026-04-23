@@ -38,7 +38,7 @@ $(document).ready(function() {
 function fetchNamesFromAPI() {
     const sheetID = $('#sheetID').val();  
     const colName = $('#colName').val();
-    const apiURL = 'https://script.google.com/macros/s/AKfycbwDnes-AzTp2MdKMA5SXrsattoWA99tVAHkMKkjTjoAKpN_nJKVidSInaGxNbKnOjJiBg/exec'
+    const apiURL = 'https://script.google.com/macros/s/AKfycbzKHKLP1VZl4oyH93bSD-UWXA41FB8HQhtiM9hHkxl-igYnAV-9pPOyaRFrHxeLzXRi/exec'
     return $.get(`${apiURL}?sheet_id=${sheetID}&column_name=${colName}`)
         .then(response => {
             if (response.status === 'success') {
