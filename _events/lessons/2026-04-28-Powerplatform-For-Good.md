@@ -2,7 +2,7 @@
 layout: event
 category : lessons
 date: 2026-04-28
-event_time: "18:40:00"
+event_time: "19:40:00"
 tagline: "Power Platform for Good! And Designing Self-Healing Pipelines"
 tags : [.net, Power Platform, Pipelines]
 left_image : 
