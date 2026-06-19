@@ -1,0 +1,192 @@
+---
+layout: default
+title: Consultancy
+tags: [consultancy, software solutions, websites, bespoke software]
+author: Dot Net Liverpool
+keywords: consultancy, software solutions, websites, bespoke software, Liverpool, .NET
+canonical: https://dotnetliverpool.org.uk/consultancy
+permalink: /consultancy
+nav: true
+nav_order: 2.25
+---
+
+<div class="container mt-4 mb-5">
+  <div class="row">
+    <div class="col-lg-10 mx-auto">
+
+      <div class="text-center mb-4">
+        <h1 class="page-title">Consultancy</h1>
+        <p class="lead text-muted">Practical support for software, websites, and bespoke digital solutions.</p>
+      </div>
+
+      <section class="content-section">
+        <h2 class="section-title">How We Can Help</h2>
+        <p>
+          If you are building out a software solution, launching a website, or need something more bespoke,
+          you can get in touch with us to discuss how we may be able to help.
+        </p>
+        <p>
+          We can work with you to understand the problem, shape a sensible technical approach, and identify
+          the next steps needed to move from idea to delivery.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">What We Can Discuss</h2>
+        <ul class="feature-list">
+          <li>Software solutions for internal tools, customer platforms, and digital services</li>
+          <li>Websites and web applications for organisations, communities, and growing businesses</li>
+          <li>Bespoke solutions where an off-the-shelf product is not the right fit</li>
+          <li>Technical direction, architecture, delivery planning, and practical next steps</li>
+        </ul>
+      </section>
+
+      <div class="cta-box text-center">
+        <h2 class="cta-title">Book a Free Consultation</h2>
+        <p class="mb-4">
+          We offer a free 30 minute consultation to talk through what you need and explore how we may be able
+          to work together.
+        </p>
+        <button data-toggle="modal" data-target="#consultancyFormModal" class="btn std-btn btn-filled btn-lg">
+          Get in Touch
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% capture modal_form %}
+  <form id="consultancyForm">
+    <div class="form-group">
+      <input type="text" class="form-control" id="consultancyName" placeholder="Full Name">
+    </div>
+    <div class="form-group">
+      <input type="email" class="form-control" id="consultancyEmail" placeholder="Email Address">
+    </div>
+    <div class="form-group">
+      <textarea class="form-control" id="consultancyMessage" placeholder="Tell us what you would like to build..."></textarea>
+    </div>
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAAyf-XxTdaBucEkV"></div>
+    <div id="msgSubmit" class="h3 text-center hidden"></div>
+    <div class="clearfix"></div>
+  </form>
+{% endcapture %}
+
+{% include modal.html
+        id='consultancyFormModal'
+        aria_label='consultancyModal'
+        title='Request a Consultation'
+        title_id='consultancyTitle'
+        content=modal_form
+        action_label='Send Message'
+        action_function='sendContactEmail("#consultancyForm","#consultancyName","#consultancyEmail","#consultancyMessage","input[name=cf-turnstile-response]")'
+%}
+
+<style>
+  .container.mt-4.mb-5 {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+
+  .page-title {
+    color: #EB586F;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .lead.text-muted {
+    font-size: 1.15rem;
+    margin-bottom: 0;
+  }
+
+  .content-section {
+    margin-bottom: 35px;
+  }
+
+  .section-title {
+    color: #444;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #EB586F;
+  }
+
+  .content-section p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #555;
+  }
+
+  .feature-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+  }
+
+  .feature-list li {
+    padding: 8px 0 8px 25px;
+    position: relative;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .feature-list li:before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: #EB586F;
+    font-weight: bold;
+  }
+
+  .cta-box {
+    background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+    padding: 35px 30px;
+    border-radius: 10px;
+    margin: 40px 0;
+    border: 1px solid #e0e0e0;
+  }
+
+  .cta-title {
+    color: #EB586F;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+
+  .cta-box p {
+    font-size: 1.05rem;
+    color: #555;
+  }
+
+  .cta-box .btn.std-btn.btn-filled {
+    color: #fff !important;
+    background: #EB586F;
+    border-color: #EB586F;
+  }
+
+  .cta-box .btn.std-btn.btn-filled:hover {
+    background: #D14E63;
+    border-color: #D14E63;
+    color: #fff !important;
+  }
+
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+    }
+
+    .cta-box {
+      padding: 25px 20px;
+      margin: 30px 0;
+    }
+  }
+</style>
