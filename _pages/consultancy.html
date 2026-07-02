@@ -47,41 +47,14 @@ nav_order: 2.25
           We offer a free 30 minute consultation to talk through what you need and explore how we may be able
           to work together.
         </p>
-        <button data-toggle="modal" data-target="#consultancyFormModal" class="btn std-btn btn-filled btn-lg">
-          Get in Touch
-        </button>
+        <a href="mailto:josh@dotnetliverpool.org.uk" class="btn std-btn btn-filled btn-lg">
+          <i class="fa fa-envelope-o mr-2"></i>josh@dotnetliverpool.org.uk
+        </a>
       </div>
 
     </div>
   </div>
 </div>
-
-{% capture modal_form %}
-  <form id="consultancyForm">
-    <div class="form-group">
-      <input type="text" class="form-control" id="consultancyName" placeholder="Full Name">
-    </div>
-    <div class="form-group">
-      <input type="email" class="form-control" id="consultancyEmail" placeholder="Email Address">
-    </div>
-    <div class="form-group">
-      <textarea class="form-control" id="consultancyMessage" placeholder="Tell us what you would like to build..."></textarea>
-    </div>
-    <div class="cf-turnstile" data-sitekey="0x4AAAAAAAyf-XxTdaBucEkV"></div>
-    <div id="msgSubmit" class="h3 text-center hidden"></div>
-    <div class="clearfix"></div>
-  </form>
-{% endcapture %}
-
-{% include modal.html
-        id='consultancyFormModal'
-        aria_label='consultancyModal'
-        title='Request a Consultation'
-        title_id='consultancyTitle'
-        content=modal_form
-        action_label='Send Message'
-        action_function='sendContactEmail("#consultancyForm","#consultancyName","#consultancyEmail","#consultancyMessage","input[name=cf-turnstile-response]")'
-%}
 
 <style>
   .container.mt-4.mb-5 {
