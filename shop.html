@@ -10,11 +10,11 @@ lantoniotrento@gmail.com
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tools Map</title>
+    <title>Shop</title>
     
     <meta name="author" content=".NET Liverpool">    
-    <meta name="keywords" content="tools, map, talks instructions, name picker">
-    <link rel="canonical" href="https://dotnetliverpool.org.uk/map"/>
+    <meta name="keywords" content="shop, merchandise, Dot Net Liverpool, Fourthwall">
+    <link rel="canonical" href="https://dotnetliverpool.org.uk/shop"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Favicons -->
@@ -49,7 +49,7 @@ lantoniotrento@gmail.com
 
         
 
-    <meta property="og:title" content="Tools Map">
+    <meta property="og:title" content="Shop">
     <meta property="og:description" content="">
     <meta property="og:image" content="/assets/img/big/">
     <meta property="og:url" content="">
@@ -372,7 +372,7 @@ lantoniotrento@gmail.com
   
   
     
-      <li class="nav-item"><a class="nav-link" href="/shop">Shop</a></li>
+      <li class="nav-item active"><a class="nav-link" href="/shop">Shop</a></li>
     
   
 
@@ -405,38 +405,29 @@ lantoniotrento@gmail.com
   
       <div class="container mt-4 mb-5">
   <div class="row">
-    <div class="col-lg-8 mx-auto">
-
+    <div class="col-12">
       <div class="text-center mb-4">
-        <h1 class="page-title">Internal Tools Map</h1>
-        <p class="lead text-muted">Quick links to helper tools we use during our meetups</p>
+        <h1 class="page-title">Shop</h1>
+        <p class="lead text-muted">Official Dot Net Liverpool merchandise</p>
       </div>
 
-      <section class="content-section">
-        <h2 class="section-title">Event Tools</h2>
+      <div class="shop-embed">
+        <iframe
+          src="https://dot-net-liverpool-shop.fourthwall.com"
+          width="100%"
+          height="800"
+          style="border: none;"
+          title="Dot Net Liverpool Shop"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allow="payment *"
+        ></iframe>
+      </div>
 
-        <ul class="tools-list">
-          <li>
-            <h3><a href="/talks-instructions" target="_blank">Talks Instructions</a></h3>
-            <p>Checklist and guidance for speakers: AV setup, intro slides, livestream, and general expectations for Dot Net Liverpool talks.</p>
-          </li>
-          <li>
-            <h3><a href="/name-picker" target="_blank">Name Picker</a></h3>
-            <p>Used at the end of the evening to randomly select the winner of the JetBrains licence from the attendance list.</p>
-          </li>
-        </ul>
-      </section>
-
-      <section class="content-section">
-        <h2 class="section-title">Location & Venue</h2>
-        <ul class="tools-list">
-          <li>
-            <h3><a href="/how-to-find-us" target="_blank">How to Find Us</a></h3>
-            <p>Directions to Acorn Insurance at the Atlantic Pavilion, Albert Dock, including train, bus, car, and bike options, plus venue photos and a Google Maps embed.</p>
-          </li>
-        </ul>
-      </section>
-
+      <p class="text-center text-muted mt-3 mb-0">
+        If the shop does not load,
+        <a href="https://dot-net-liverpool-shop.fourthwall.com" target="_blank" rel="noopener noreferrer">open it in a new tab</a>.
+      </p>
     </div>
   </div>
 </div>
@@ -444,66 +435,34 @@ lantoniotrento@gmail.com
 <style>
   .page-title {
     color: #EB586F;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 10px;
   }
 
-  .content-section {
-    margin-bottom: 30px;
+  .shop-embed {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: #fff;
   }
 
-  .section-title {
-    color: #444;
-    font-size: 1.6rem;
-    font-weight: 600;
-    margin-bottom: 12px;
-    border-bottom: 2px solid #EB586F;
-    padding-bottom: 8px;
+  .shop-embed iframe {
+    display: block;
+    min-height: 800px;
   }
 
-  .tools-list {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 0;
-  }
-
-  .tools-list li {
-    margin-bottom: 18px;
-  }
-
-  .tools-list h3 {
-    font-size: 1.2rem;
-    margin-bottom: 4px;
-  }
-
-  .tools-list a {
-    color: #EB586F;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s;
-  }
-
-  .tools-list a:hover {
-    border-bottom-color: #EB586F;
-  }
-
-  .tools-list p {
-    margin-bottom: 0;
-    color: #555;
-  }
-
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     .page-title {
-      font-size: 1.8rem;
+      font-size: 2rem;
     }
 
-    .section-title {
-      font-size: 1.4rem;
+    .shop-embed iframe {
+      height: 900px;
+      min-height: 900px;
     }
   }
 </style>
-
 
             <!-- Footer -->
       <footer class="default-footer text-center">
