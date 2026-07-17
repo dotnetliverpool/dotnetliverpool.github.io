@@ -8,6 +8,8 @@ canonical: https://dotnetliverpool.org.uk/shop
 permalink: /shop
 nav: true
 nav_order: 2.75
+js:
+  - shop.js
 ---
 
 <div class="container mt-4 mb-5">
@@ -18,23 +20,57 @@ nav_order: 2.75
         <p class="lead text-muted">Official Dot Net Liverpool merchandise</p>
       </div>
 
-      <div class="shop-embed">
-        <iframe
-          src="https://dot-net-liverpool-shop.fourthwall.com"
-          width="100%"
-          height="800"
-          style="border: none;"
-          title="Dot Net Liverpool Shop"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allow="payment *"
-        ></iframe>
-      </div>
+      <div id="shop-status" class="shop-status text-center" aria-live="polite">Loading products…</div>
+      <div id="shop-grid" class="shop-grid" hidden></div>
+    </div>
+  </div>
+</div>
 
-      <p class="text-center text-muted mt-3 mb-0">
-        If the shop does not load,
-        <a href="https://dot-net-liverpool-shop.fourthwall.com" target="_blank" rel="noopener noreferrer">open it in a new tab</a>.
-      </p>
+<button type="button" id="cart-toggle" class="cart-toggle" aria-label="Open cart" hidden>
+  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+  <span id="cart-count" class="cart-count">0</span>
+</button>
+
+<div id="cart-drawer" class="cart-drawer" hidden>
+  <div class="cart-drawer-header">
+    <h2>Your cart</h2>
+    <button type="button" id="cart-close" class="cart-close" aria-label="Close cart">&times;</button>
+  </div>
+  <div id="cart-items" class="cart-items"></div>
+  <div class="cart-drawer-footer">
+    <p id="cart-total" class="cart-total"></p>
+    <button type="button" id="checkout-btn" class="btn std-btn btn-filled btn-block">Checkout</button>
+    <p class="cart-note text-muted">Secure checkout is handled by Fourthwall</p>
+  </div>
+</div>
+<div id="cart-backdrop" class="cart-backdrop" hidden></div>
+
+<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <img id="productModalImage" class="img-fluid product-modal-image" alt="">
+          </div>
+          <div class="col-md-6">
+            <p id="productModalPrice" class="product-modal-price"></p>
+            <div id="productModalDescription" class="product-modal-description"></div>
+            <div id="productVariantControls" class="product-variant-controls"></div>
+            <div class="product-qty-row">
+              <label for="productQty">Qty</label>
+              <input type="number" id="productQty" class="form-control" min="1" max="10" value="1">
+            </div>
+            <button type="button" id="addToCartBtn" class="btn std-btn btn-filled btn-block mt-3">Add to cart</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -47,16 +83,268 @@ nav_order: 2.75
     margin-bottom: 10px;
   }
 
-  .shop-embed {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    background: #fff;
+  .shop-status {
+    color: #666;
+    padding: 40px 20px;
   }
 
-  .shop-embed iframe {
+  .shop-status.is-error {
+    color: #c0392b;
+  }
+
+  .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+  }
+
+  .shop-card {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    width: 100%;
+  }
+
+  .shop-card:hover,
+  .shop-card:focus {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+    outline: none;
+  }
+
+  .shop-card-image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    background: #f5f5f5;
     display: block;
-    min-height: 800px;
+  }
+
+  .shop-card-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .shop-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 8px;
+    line-height: 1.35;
+  }
+
+  .shop-card-price {
+    margin-top: auto;
+    color: #EB586F;
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+
+  .cart-toggle {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1040;
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    background: #EB586F;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(235, 88, 111, 0.4);
+    cursor: pointer;
+  }
+
+  .cart-toggle:hover {
+    background: #D14E63;
+  }
+
+  .cart-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    border-radius: 11px;
+    background: #333;
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 22px;
+    font-weight: 700;
+  }
+
+  .cart-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1045;
+  }
+
+  .cart-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(380px, 100%);
+    height: 100%;
+    background: #fff;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .cart-drawer-header,
+  .cart-drawer-footer {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .cart-drawer-footer {
+    border-bottom: none;
+    border-top: 1px solid #eee;
+    margin-top: auto;
+  }
+
+  .cart-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cart-drawer-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+
+  .cart-close {
+    border: none;
+    background: transparent;
+    font-size: 1.75rem;
+    line-height: 1;
+    color: #666;
+    cursor: pointer;
+  }
+
+  .cart-items {
+    padding: 12px 20px;
+    overflow-y: auto;
+    flex: 1;
+  }
+
+  .cart-item {
+    display: grid;
+    grid-template-columns: 64px 1fr auto;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .cart-item img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 4px;
+    background: #f5f5f5;
+  }
+
+  .cart-item-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 0 0 4px;
+    color: #333;
+  }
+
+  .cart-item-meta {
+    font-size: 0.85rem;
+    color: #777;
+    margin: 0;
+  }
+
+  .cart-item-remove {
+    border: none;
+    background: transparent;
+    color: #EB586F;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 0;
+  }
+
+  .cart-total {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .cart-note {
+    font-size: 0.8rem;
+    margin: 10px 0 0;
+  }
+
+  .btn.std-btn.btn-filled {
+    color: #fff !important;
+    background: #EB586F;
+    border-color: #EB586F;
+  }
+
+  .btn.std-btn.btn-filled:hover,
+  .btn.std-btn.btn-filled:disabled {
+    background: #D14E63;
+    border-color: #D14E63;
+    color: #fff !important;
+  }
+
+  .btn.std-btn.btn-filled:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  .product-modal-image {
+    width: 100%;
+    border-radius: 8px;
+    background: #f5f5f5;
+  }
+
+  .product-modal-price {
+    color: #EB586F;
+    font-size: 1.35rem;
+    font-weight: 700;
+  }
+
+  .product-modal-description {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .product-modal-description p:last-child {
+    margin-bottom: 0;
+  }
+
+  .product-variant-controls .form-group {
+    margin-bottom: 12px;
+  }
+
+  .product-variant-controls label,
+  .product-qty-row label {
+    font-weight: 600;
+    color: #444;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .product-qty-row {
+    max-width: 100px;
   }
 
   @media (max-width: 768px) {
@@ -64,9 +352,9 @@ nav_order: 2.75
       font-size: 2rem;
     }
 
-    .shop-embed iframe {
-      height: 900px;
-      min-height: 900px;
+    .shop-grid {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 16px;
     }
   }
 </style>
