@@ -1,0 +1,72 @@
+---
+layout: default
+title: Shop
+tags: [shop, merchandise, fourthwall]
+author: Dot Net Liverpool
+keywords: shop, merchandise, Dot Net Liverpool, Fourthwall
+canonical: https://dotnetliverpool.org.uk/shop
+permalink: /shop
+nav: true
+nav_order: 2.75
+---
+
+<div class="container mt-4 mb-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="text-center mb-4">
+        <h1 class="page-title">Shop</h1>
+        <p class="lead text-muted">Official Dot Net Liverpool merchandise</p>
+      </div>
+
+      <div class="shop-embed">
+        <iframe
+          src="https://dot-net-liverpool-shop.fourthwall.com"
+          width="100%"
+          height="800"
+          style="border: none;"
+          title="Dot Net Liverpool Shop"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allow="payment *"
+        ></iframe>
+      </div>
+
+      <p class="text-center text-muted mt-3 mb-0">
+        If the shop does not load,
+        <a href="https://dot-net-liverpool-shop.fourthwall.com" target="_blank" rel="noopener noreferrer">open it in a new tab</a>.
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .page-title {
+    color: #EB586F;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .shop-embed {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: #fff;
+  }
+
+  .shop-embed iframe {
+    display: block;
+    min-height: 800px;
+  }
+
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 2rem;
+    }
+
+    .shop-embed iframe {
+      height: 900px;
+      min-height: 900px;
+    }
+  }
+</style>
