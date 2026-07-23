@@ -438,11 +438,12 @@ lantoniotrento@gmail.com
         <h2 class="cta-title">Book a Free Consultation</h2>
         <p class="mb-4">
           We offer a free 30 minute consultation to talk through what you need and explore how we may be able
-          to work together.
+          to work together. Pick a time that works for you below.
         </p>
-        <a href="mailto:josh@dotnetliverpool.org.uk" class="btn std-btn btn-filled btn-lg">
-          <i class="fa fa-envelope-o mr-2"></i>josh@dotnetliverpool.org.uk
-        </a>
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/dotnetliverpool/30min" data-resize="true" style="min-width:320px;height:1000px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
       </div>
 
     </div>
@@ -529,16 +530,14 @@ lantoniotrento@gmail.com
     color: #555;
   }
 
-  .cta-box .btn.std-btn.btn-filled {
-    color: #fff !important;
-    background: #EB586F;
-    border-color: #EB586F;
+  .cta-box .calendly-inline-widget {
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: visible;
   }
 
-  .cta-box .btn.std-btn.btn-filled:hover {
-    background: #D14E63;
-    border-color: #D14E63;
-    color: #fff !important;
+  .cta-box .calendly-inline-widget iframe {
+    min-height: 1000px;
   }
 
   @media (max-width: 768px) {
