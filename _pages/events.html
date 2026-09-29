@@ -68,7 +68,7 @@ pagination:
                                                             <i class="fa fa-calendar icons"></i> RSVP
                                                       </a>
                                                       <a 
-                                                            href="{{site.location-link}}"
+                                                            href="{% if event.location_link %}{{ event.location_link }}{% else %}{{ site.location-link }}{% endif %}"
                                                             class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
                                                             target="_blank"
                                                       >

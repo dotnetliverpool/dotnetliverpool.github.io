@@ -2,7 +2,9 @@
 layout: event
 category : lessons
 date: 2026-09-29
-event_time: "18:40:00"
+event_time: "19:00:00"
+location_name: "12 Webster Ct, Carina Park, Westbrook, Warrington WA5 8WD, UK · Warrington"
+location_link: "https://www.google.com/maps/search/?api=1&query=12+Webster+Ct,+Carina+Park,+Westbrook,+Warrington+WA5+8WD"
 tagline: "Secure by Design & An AI Harness for Architecture"
 tags : [.net, Security, Architecture, AI]
 left_image :

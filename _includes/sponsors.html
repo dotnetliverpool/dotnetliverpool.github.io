@@ -1,8 +1,10 @@
 <!-- ************************** sponsors  ***************************** -->
 {% for sponsor in site.data.sponsors %}
+           {% unless sponsor.enabled == false %}
            <div class="sponsors">
                <a href="{{ sponsor.url }}" target="_blank" title="{{ sponsor.title }}">
                     <img src="{{ sponsor.img }}" alt="{{ sponsor.alt }}" />
                </a>
            </div>
+           {% endunless %}
 {% endfor %}

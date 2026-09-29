@@ -16,14 +16,14 @@
           <!-- Title -->
           <div class="d-flex flex-column align-items-center col-12 mb-3">
               <h1 class="text-center">{{ page.tagline }}</h1>
-              <p><i class="fa fa-map-marker icons mr-1" ></i>{{ site.location_name }}</p>
+              <p><i class="fa fa-map-marker icons mr-1" ></i>{% if page.location_name %}{{ page.location_name }}{% else %}{{ site.location_name }}{% endif %}</p>
           </div>
 
           <div class="mb-60"></div>
 
           <!-- Timer -->
           {% assign formatted_date = page.date | date: "%Y-%m-%d" %}
-          {% assign target_date = formatted_date | append: "T" | append: page.event_time | append: "Z" %}
+          {% assign target_date = formatted_date | append: "T" | append: page.event_time %}
           <div id="countdown-timer" data-target-date="{{target_date}}" class="d-flex flex-wrap justify-content-center mb-3">
             <div class="timer-box">
                 <span id="days" class="time-number">00</span>
@@ -54,6 +54,7 @@
           <section class="customer-logos slider d-flex justify-content-center">
               
                 {% for sponsor in site.data.sponsors %}
+                  {% unless sponsor.enabled == false %}
                   <div class="slide d-flex justify-content-center">
                     <div class="card">
                         <img class="card-img-top" src="{{ sponsor.img }}" alt="{{ sponsor.alt }}">
@@ -61,6 +62,7 @@
                         </div>
                     </div>
                   </div>
+                  {% endunless %}
                 {% endfor %}
             </section>
         </div>

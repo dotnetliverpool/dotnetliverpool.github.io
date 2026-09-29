@@ -50,11 +50,13 @@ permalink: /survey
             <section class="customer-logos slider d-flex justify-content-center">
                 
                 {% for sponsor in site.data.sponsors %}
+                  {% unless sponsor.enabled == false %}
                   <div class="slide d-flex justify-content-center">
                     <div class="card">
                         <img class="card-img-top" src="{{ sponsor.img }}" alt="{{ sponsor.alt }}">
                     </div>
                   </div>
+                  {% endunless %}
                 {% endfor %}
             </section>
         </div>
