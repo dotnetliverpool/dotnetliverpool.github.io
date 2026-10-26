@@ -132,11 +132,13 @@ pagination:
                                                             target="_blank">
                                                             <i class="fa fa-users icons"></i> people
                                                       </a>
+                                                      {% if event.post-link %}
                                                       <a href="{{event.post-link}}"
                                                             class="btn std-btn btn-xs btn-filled event-footer-buttons mx-2 mb-1"
                                                             target="_blank">
                                                             <i class="fa fa-book icons"></i> read
                                                       </a>
+                                                      {% endif %}
                                                 </div>
                                           </div>          
                                     {% endif %}
