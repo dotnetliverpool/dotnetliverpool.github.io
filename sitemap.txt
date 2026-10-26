@@ -27,3 +27,4 @@ https://dev.dotnetliverpool.org.uk//events/5/index.html
 https://dev.dotnetliverpool.org.uk//events/6/index.html
 https://dev.dotnetliverpool.org.uk//events/7/index.html
 https://dev.dotnetliverpool.org.uk//events/8/index.html
+https://dev.dotnetliverpool.org.uk//events/9/index.html
